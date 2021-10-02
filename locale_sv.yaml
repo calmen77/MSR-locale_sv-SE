@@ -34,7 +34,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 # your attribution will be shown on the "About" page (plain text only; no HTML).
 attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); offered under MIT License."
 # Your github user ID and repository name for this translation
-#github_repository: toggledbits/msr-localization
+github_repository: calmen77/MSR-locale_sv
 
 # Number formatting
 decimal_sep: ','
