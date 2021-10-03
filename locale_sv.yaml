@@ -35,6 +35,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              versions. Update this value as you apply changes to keep parity with the
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
+
 ref_version: 21275
 
 # If you contribute your language file to Reactor to be included in builds, this is how
@@ -123,10 +124,8 @@ strings:
   'Local (browser) time': 'Lokal tid (webbläsare)'  # tooltip, header
   'Host time': 'Tid värd'  # tooltip, header
   '#sysconf-error-time': >
-    The time on this system and on the Reactor host are significantly different.
-    This may be due to incorrect system configuration on either or both. Please
-    check the configuration of both systems. The host reports {0}; browser
-    reports {1}; difference {2:.3f} seconds.
+    Tiden mellan det här systemet och värden för Reactor skiljer sig markant.
+    Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen     kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren     rapporterar {1}; skillnad {2:.3f} sekunder.
 
   # Status page
   '#reaction-status-ended': 'avslutad'
@@ -142,7 +141,7 @@ strings:
   'Recently Changed Entities': 'Nyligen ändrade Entiteter'  # card title
   'Current Alerts': 'Nuvarande varningar'  #card title
   "There are no current alerts.": "Det finns inga nuvarande varningar."
-  "; this alert has repeated {0:d} times.": "; den här varningen har upprepats {0:d} gånger."  # count
+  "; this alert has repeated {0:d} times.": '; den här varningen har upprepats {0:d} gång{0:"er"?!=1}.'  # count
   'Dismiss Alert': 'Avfärda varning'  # title text for dismiss button (hover)
   'Clear All': 'Rensa alla'  # card menu item
 
@@ -196,7 +195,7 @@ strings:
   '#reaction-action-delete': 'Ta bort'  # tooltip
   # Delete Reaction modal dialog
   '#reaction-delete-title': 'Bekräfta radering'
-  '#reaction-delete-prompt': 'Är du säker {0:q}? Det finns ingen "undo"'
+  '#reaction-delete-prompt': 'Är du säker {0:q}? Det går inte att "ångra"'
   '#reaction-delete-button-delete': 'Ta bort'
   '#reaction-delete-button-cancel': 'Avbryt'
 
@@ -231,7 +230,7 @@ strings:
 
   # Alert Watcher (top bar)
   'No alerts.': 'Inga varningar.'
-  '{0:d} alerts; see Status.': '{0:d} varningar; se Status.'  # number of alerts
+  '{0:d} alerts; see Status.': '{0:d} varning{0:"ar"?>1}; se Status.'  # number of alerts
 
   # Entity Picker (modal dialog)
   'Choose Entity': 'Välj entitet'  # dialog title
@@ -251,9 +250,9 @@ strings:
   '#rule-state-null': '(inget)'  # condition state: no state
   '#rule-state-true': 'AKTIV'  # condition state: set (true)
   '#rule-state-false': 'återställd'  # condition state: reset (false)
-  '#cond-status-repeats': '(senaste {0} spann {1:.1f} sekunder)'  # condition status: repeat count, time span
+  '#cond-status-repeats': '(senaste {0} spann {1:.1f} sekund{1:"er"?!=1})'  # condition status: repeat count, time span
   '#cond-status-pulsed': >  # condition status: pulse count, limit
-    (pulerat {0:d?<1000}{0:"&gt;999"?>=1000}{1:" av max "?>0}{1:d?>0} gånger)
+    (pulserat {0:d?<1000}{0:"&gt;999"?>=1000}{1:" av max "?>0}{1:d?>0} gång{1:"er"?!=1})
   '#cond-status-latched': '(låst)'  # condition status
   '#cond-status-waiting-time': 'väntar på {0}'  # condition status: time
   '#cond-status-sustained': 'oavbruten'  # condition status
@@ -314,14 +313,14 @@ strings:
   '(case-sensitive)': '(skiftlägeskänslig)'  # case-sensitive test condition
   '{0} (missing rule)': '{0} (saknad regel)'  # rule condition, missing rule ID
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
-  '#sun-desc-after': 'efter {1:D?!=0}{1:" minuter"?!=0}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
-  '#sun-desc-before': 'före {1:D?!=0}{1:" minuter"?!=0}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-after': 'efter {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-before': 'före {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
   '#sun-desc-bet': >
-    mellan {1:#d?!=0}{1:" minuter"?!=0}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
-    {3:#d?!=0}{3:" minuter"?!=0}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
+    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#sun-desc-nob': >
-    mellan {1:#d?!=0}{1:" minuter"?!=0}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
-    {3:#d?!=0}{3:" minuter"?!=0}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
+    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#weekday-desc-': 'varje vecka på {0}'  # weekdays
   '#weekday-desc-1': 'på den första {0} i varje månad'
   '#weekday-desc-2': 'på den andra {0} i varje månad'
@@ -338,15 +337,15 @@ strings:
   '#trange-desc-bet': 'från {0} till {1}'  # start, end
   '#trange-desc-nob': 'inte mellan {0} och {1}'  # start, end
   '#interval-desc': >  # days, hrs, mins
-    varje {0:d?>0}{0:" dag"?>0}{0:"s"?>1} {1:d?>0}{1:" timmar"?>0}{1:"s"?>1} {2:d?>0}{2:" minuter"?>0}{2:"s"?>1}
+    varje {0:d?>0}{0:" dag"?>0}{0:"ar"?>1} {1:d?>0}{1:" timm"?>0}{1:"e"?=1}{1:"ar"?>1} {2:d?>0}{2:" minut"?>0}{2:"er"?>1}
   '#interval-condrel': '(i förhållande till {0})'  # condition description or date/time
   '#cond-nocase': 'Ignorera&nbsp;skiftläge'  # checkbox label (note html non-breaking space)
   '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
-    {0:"inom "?>0}{0:d?>0}{0:" sekunder "?>0}efter {1:q}{2:" (vilket fortfarande är SANT)"?sant}
-  '#condopt-repeat': 'repeteras {0} gånger inom {1} secs'
-  '#condopt-sustain': 'i {0:"mindre än "?:<}{0:"åtminstone "?!:<}{1} sekunder'
-  '#condopt-hold': 'fördröj återställning i {0} sekunder'
-  '#condopt-pulse': 'pulsera i {0} sekunder{1:", repetera efter "?>0}{1:d?>0}{1:" sekunder"?>0}{2:" upp till "?>0}{2:d?>0}{2:" gånger"?>0}'
+    {0:"inom "?>0}{0:d?>0}{0:" sekund"?>0}{0:"er"?>1} efter {1:q}{2:" (vilket fortfarande är SANT)"?sant}
+  '#condopt-repeat': 'repeteras {0} gång{0:"er"?>1} inom {1} sekund{1:"er"?>1}'
+  '#condopt-sustain': 'i {0:"mindre än "?:<}{0:"åtminstone "?!:<}{1} sekund{1:"er"?>1}'
+  '#condopt-hold': 'fördröj återställning i {0} sekund{0:"er"?>1}'
+  '#condopt-pulse': 'pulsera i {0} sekund{0:"er"?>1}{1:", repetera efter "?>0}{1:d?>0}{1:" sekund"?>0}{1:"er"?>1}{2:" upp till "?>0}{2:d?>0}{2:" gång"?>0}{2:"er"?>1}'
   '#condopt-latch': 'låsning'
   'Local Rule Variables': 'Lokala regelvariabler'  # option group header
   'Global Variables': 'Globala variabler'  # option group header
@@ -384,7 +383,7 @@ strings:
   '#condform-interval-relopt-time': 'Tid'  # menu item
   '#condform-interval-relopt-cond': 'Villkor SANT'  # menu item
   'Enter new group name': 'Skriv nytt gruppnamn'  # group rename
-  '#cond-collapsed-count': '({0:d} villkor{0:"s"?!=1} kollapsade)'
+  '#cond-collapsed-count': '({0:d} villkor kollapsa{0:"t"?=1}{0:"de"?!=1})'
   # Import Rule modal dialog
   '#cond-import-title': 'Importera regel som grupp'
   '#cond-import-select-label': 'Välj regel att importera:'  # dialog text
@@ -601,7 +600,7 @@ strings:
     Reaktionsuppgiften {0:q} misslyckades på grund av ett undantag. Vänligen undersök i loggfilen.
   "Reaction {0:q} ({1}) step {2} delay ignored because the delay target time has already passed.": >
     Reaktion {0:q} ({1}) steg {2} fördöjning ignorerad eftersom måltiden redan har passerat.
-  'from {0:s?!n}{0:"now"?} + {1} seconds': 'från {0:s?!n}{0:"nu"?} + {1} sekunder'  # 0=delay start point, 1=delay length
+  'from {0:s?!n}{0:"now"?} + {1} seconds': 'från {0:s?!n}{0:"nu"?} + {1} sekund{1:"er"?>1}'  # 0=delay start point, 1=delay length
   "Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.": >
     Reaktion {0:q} ({1}) steg {2} Entitetsåtgärden misslyckades efterom entitet {3:q} inte kunde hittas.
   "Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.": >
@@ -642,7 +641,7 @@ strings:
   "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
     Regel {0:q} misslyckades att utvärderas på grund av ett fel. Vänligen undersök i loggfilen.
   "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
-    An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found
+    Ett entitetsattributs tillstånd i regel {0:q} misslyckades eftersom refererad entitet {1} inte kunde hittas
   "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
     Ett entitetsattributs tillstånd i regel {0:q} misslyckades eftersom refererad entitet {1} ({2}) har inte attribut {3}
   'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
