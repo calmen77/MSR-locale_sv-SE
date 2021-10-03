@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21275  # update this to the Julian date (YYDDD) of your published translation
+version: 21276  # update this to the Julian date (YYDDD) of your published translation
 locale: sv
 description: Svenska
 author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
@@ -149,7 +149,7 @@ strings:
   'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
   '#ruleset-control-rename': 'Klicka för att byta namn på regelgrupp'  # tooltip (hover over Rule Set name)
   '#ruleset-control-alphasort': 'Sortera regler i bokstavsordning'  # tooltip
-  '#ruleset-control-delete': 'Ta bort denna regel'  # tooltip
+  '#ruleset-control-delete': 'Ta bort den här regelgruppen'  # tooltip
   '#ruleset-button-newrule': 'Skapa Regel'  # button text
   '#ruleset-delete-unable': 'Det gick inte att ta bort regel'  # error dialog title
   '#ruleset-delete-message': "Du kan inte ta bort den sista regeln; det måste finnas åtminstone en."  # error dialog message
@@ -166,7 +166,7 @@ strings:
   '(to current rule set)': '(till nuvarande regelgrupp)'  # target default value (copy)
   # Delete Rule modal dialog
   '#rule-delete-title': 'Ta bort regel'  # dialog title
-  '#rule-delete-prompt': 'Är du säker {0:q}? Om andra regler är beroende av denna, så kommer de sluta fungera.'
+  '#rule-delete-prompt': 'Är du säker? Om andra regler är beroende av denna, så kommer de sluta fungera.'
   '#rule-delete-button-delete': 'Ta bort'  # button label
   '#rule-delete-button-cancel': 'Avbryt'  # button label
   '#rule-delete-error': 'Ett fel uppstod när regeln skulle tas bort.'
