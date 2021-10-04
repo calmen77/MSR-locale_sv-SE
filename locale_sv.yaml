@@ -1,0 +1,738 @@
+# This is a language translation/localization file for Reactor. For information
+# please go to https://reactor.toggledbits.com/docs/Localization/
+#
+# This file is NOT included under the Reactor EULA, and is licensed separately
+# under the MIT License:
+#
+# (C) 2021 Patrick Rigney (US English/reference file)
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this file (the "Software"), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to permit
+# persons to whom the Software is furnished to do so, subject to the following
+# conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+#
+---
+version: 21277  # update this to the Julian date (YYDDD) of your published translation
+locale: sv
+description: Svenska
+author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
+maintainer: "Crille, https://smarthome.community/user/crille"
+
+# Translators: update ref_version to reflect the version of the US English file used to
+#              produce your translation. This will help you track changes needed to future
+#              versions. Update this value as you apply changes to keep parity with the
+#              US English reference file. Also, use the txtool.js application in the 
+#              Reactor install "tools" subdirectory to help you identify differences.
+
+ref_version: 21277
+
+# If you contribute your language file to Reactor to be included in builds, this is how
+# your attribution will be shown on the "About" page (plain text only; no HTML).
+attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); offered under MIT License."
+# Your github user ID and repository name for this translation
+github_repository: calmen77/MSR-locale_sv
+
+# Number formatting
+decimal_sep: ','
+thousands_sep: '.'
+
+# Date formatting
+time_meridiem:
+  ante: am
+  post: pm
+short_weekdays:  # order MUST be Sun-Sat; do not change order
+  - Sön
+  - Mån
+  - Tis
+  - Ons
+  - Tor
+  - Fre
+  - Lör
+long_weekdays:  # order MUST be Sun-Sat; do not change order
+  - Söndag
+  - Mondag
+  - Tisdag
+  - Onsdag
+  - Torsdag
+  - Fredag
+  - Lördag
+short_months:
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - Maj
+  - Jun
+  - Jul
+  - Aug
+  - Sep
+  - Okt
+  - Nov
+  - Dec
+long_months:
+  - Januari
+  - Februari
+  - Mars
+  - April
+  - Maj
+  - Juni
+  - Juli
+  - Augusti
+  - September
+  - Oktober
+  - November
+  - December
+weekday_modes:  # modes for the Weekday condition type, MUST be listed in order shown
+  - Varje
+  - Första
+  - Andra
+  - Tredje
+  - Fjärde
+  - Femte
+  - Sista
+
+# Translation strings
+# See https://reactor.toggledbits.com/docs/Localization/ for discussion of strings and formatting rules.
+strings:
+  # Main navigation titles and pages
+  '#nav_status': Status
+  '#nav_rulesets': Regler
+  '#nav_reactions': Reaktioner
+  '#nav_expressions': Uttryck
+  '#nav_entities': Entiteter
+  '#nav_scope': Spåra
+  '#nav_tools': Verktyg
+  '#nav_dashboard': Instrumentpanel
+  '#nav_docs': Manual
+  '#nav_bugs': Buggrapportering
+  '#nav_donate': Donera
+  '#nav_about': Om
+  'Connected': 'Ansluten'
+  'DISCONNECTED!': 'FRÅNKOPPLAD!'
+  'Local (browser) time': 'Lokal tid (webbläsare)'  # tooltip, header
+  'Host time': 'Värddatorns tid'  # tooltip, header
+  '#sysconf-error-time': >
+    Tiden mellan det här systemet och värden för Reactor skiljer sig markant.
+    Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen     kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren     rapporterar {1}; skillnad {2:.3f} sekunder.
+
+  # Status page
+  '#reaction-status-ended': 'avslutad'
+  '#reaction-status-ready': 'redo'
+  '#reaction-status-running': 'kör'
+  '#reaction-status-delayed': 'fördröjd'
+  '#reaction-status-waiting': 'väntar'
+  '#reaction-status-suspended': 'suspenderad'
+  'Set Rules': 'Aktiva Regler'  # card title
+  'There are no set rules at this moment.': 'Det finns inga aktiva regler för tillfället.'
+  'Running Reactions': 'Pågående Reaktioner'  # card title
+  "There are no running reactions.": "Det finns inga pågående reaktioner."
+  'Recently Changed Entities': 'Nyligen ändrade Entiteter'  # card title
+  'Current Alerts': 'Nuvarande varningar'  #card title
+  "There are no current alerts.": "Det finns inga nuvarande varningar."
+  "; this alert has repeated {0:d} times.": '; den här varningen har upprepats {0:d} gång{0:"er"?!=1}.'  # count
+  'Dismiss Alert': 'Avfärda varning'  # title text for dismiss button (hover)
+  'Clear All': 'Rensa alla'  # card menu item
+
+  # Rule Sets page
+  'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
+  '#ruleset-control-rename': 'Klicka för att byta namn på regelgrupp'  # tooltip (hover over Rule Set name)
+  '#ruleset-control-alphasort': 'Sortera regler i bokstavsordning'  # tooltip
+  '#ruleset-control-delete': 'Ta bort den här regelgruppen'  # tooltip
+  '#ruleset-button-newrule': 'Skapa Regel'  # button text
+  '#ruleset-delete-unable': 'Det gick inte att ta bort regel'  # error dialog title
+  '#ruleset-delete-message': "Du kan inte ta bort den sista regeln; det måste finnas åtminstone en."  # error dialog message
+  # Rename Rule modal dialog
+  '#rule-rename-title': 'Byt namn på regel'  # dialog title
+  '#rule-rename-button-cancel': 'Avbryt'  # button label
+  '#rule-rename-button-rename': 'Byt namn'  # button label
+  # Copy/Move Rule modal dialog
+  '#rule-move-title': 'Kopiera/Flytta Regel'  # dialog title
+  '#rule-move-target-label': 'Flytta till:'  # field label (for menu)
+  '#rule-move-button-move': 'Flytta regel'  # button label
+  '#rule-move-button-copy': 'Kopiera regel'  # button label
+  '#rule-move-button-cancel': 'Avbryt'  # button label
+  '(to current rule set)': '(till nuvarande regelgrupp)'  # target default value (copy)
+  # Delete Rule modal dialog
+  '#rule-delete-title': 'Ta bort regel'  # dialog title
+  '#rule-delete-prompt': 'Är du säker? Om andra regler är beroende av denna, så kommer de sluta fungera.'
+  '#rule-delete-button-delete': 'Ta bort'  # button label
+  '#rule-delete-button-cancel': 'Avbryt'  # button label
+  '#rule-delete-error': 'Ett fel uppstod när regeln skulle tas bort.'
+  # Rename Rule Set model dialog
+  '#ruleset-rename-title': 'Byt namn på regelgrupp'
+  '#ruleset-rename-button-rename': 'Byt namn'
+  '#ruleset-rename-button-cancel': 'Avbryt'
+  # Tooltips for rule row action buttons
+  '#rule-control-enable': 'Växla på/av'  # tooltip
+  '#rule-control-edit': 'Redigera regel'  # tooltip
+  '#rule-control-reset': 'Återställ regel'  # tooltip
+  '#rule-control-copy': 'Kopiera/Flytta regel'  # tooltip
+  '#rule-control-sort': 'Sortera (Håll ned och dra)'  # tooltip
+  '#rule-control-delete': 'Ta bort regel'  # tooltip
+  'This rule set is empty. Click "Add Rule" to add a rule to it.': 'Den här regelgruppen är tom. Klicka på "Lägg till regel" för att lägga till en regel.'
+
+# Rule status detail card
+  '#group-status-no-data': '(ingen data)'
+  'Rule ID: {0}': 'Regel ID: {0}'  # 0=rule ID
+
+  # Reactions page
+  '#reactions-page-title': 'Globala Reaktioner'
+  'This Reaction is empty': 'Den här Reaktionen är tom'
+  'Reaction ID: {0}': 'Reaktions ID: {0}'
+  '#reactions-button-create': 'Skapa Reaktion'
+  # Tool tips for Reaction actions
+  '#reaction-action-run': 'Kör nu'  # tooltip
+  '#reaction-action-edit': 'Redigera'  # tooltip
+  '#reaction-action-copy': 'Kopiera'  # tooltip
+  '#reaction-action-delete': 'Ta bort'  # tooltip
+  # Delete Reaction modal dialog
+  '#reaction-delete-title': 'Bekräfta radering'
+  '#reaction-delete-prompt': 'Är du säker {0:q}? Det går inte att "ångra"'
+  '#reaction-delete-button-delete': 'Ta bort'
+  '#reaction-delete-button-cancel': 'Avbryt'
+
+  # Expressions page
+  'Global Expressions': 'Globala Uttryck'
+  'Save Changes': 'Spara ändringar'  # button label
+  'Revert': 'Ångra'  # button label
+
+  # Entities page
+  'Click for predefined values': 'Klicka för fördefinierade värden'
+  '(not specified)': '(inget)'  # dropdown field in action dialog, no value to be sent
+  'Perform {0}': 'Utför {0}'  # Dialog title
+  'Ready to perform {0:q} on {1} ({2})?': 'Redo att utföra {0:q} på {1} ({2})?'  # action dialog prompt: action, entity, entity ID
+  '#entity-action-cancel': 'Avbryt'
+  '#entity-action-perform': 'Utför nu'
+  'Click to perform this action': 'Klicka för att utföra den här åtgärden'
+  'Capabilities: {0}': 'Förmågor: {0}'  # list of capabilities in entity detail card
+  'Actions: ': 'Åtgärder: '
+  '#entities-never-updated': 'aldrig'  # shown when last update for entity is null
+  '#entities-col-name': 'Entitetsnamn'  # column heading
+  '#entities-col-id': 'Kanoniskt ID'  # column heading
+  '#entities-col-value': 'Primärt värde'  # column heading
+  '#entities-col-modified': 'Senast ändrad'  # column heading
+
+  # Scope page
+  '(choose attribute)': '(välj attribut)'
+  '(choose target)': '(välj mål)'
+  'Add Trace': 'Lägg till spårning'  # button text
+  'Clear Traces': 'Rensa spårningar'  # button text
+
+  # Tools page
+  'Restart Reactor': 'Starta om Reactor'  # Restart button
+
+  # Alert Watcher (top bar)
+  'No alerts.': 'Inga varningar.'
+  '{0:d} alerts; see Status.': '{0:d} varning{0:"ar"?>1}; se Status.'  # number of alerts
+
+  # Entity Picker (modal dialog)
+  'Choose Entity': 'Välj entitet'  # dialog title
+  'Name Contains:': 'Namn innehåller:'
+  'Filters:': 'Filter:'
+  '#ep-filter-clear': 'Rensa filter'  # clear button (clears filters)
+  '(any controller)': '(någon kontroller)'
+  '(any group)': '(någon grupp)'
+  '(any capability)': '(någon förmåga)'
+
+  # Rule Editor
+  '#ruleedit-triggers-title': 'Utlösare'
+  '#ruleedit-constraints-title': 'Villkor'
+  '#ruleedit-setreaction-title': 'Reaktion'
+  '#ruleedit-resetreaction-title': 'Återställningsreaktion'
+  '#ruleedit-expressions-title': 'Lokala uttryck'
+  '#rule-state-null': '(inget)'  # condition state: no state
+  '#rule-state-true': 'AKTIV'  # condition state: set (true)
+  '#rule-state-false': 'återställd'  # condition state: reset (false)
+  '{0} -- {1} as of {2}': >  # condition state; 0=cond state, 1=eval state, 2=formatted date/time, 3=raw date/time
+    {0:=64s}{0:"..."?#>64} -- {1:T} sedan {2}
+  '#cond-status-repeats': '(senaste {0} spann {1:.1f} sekund{1:"er"?!=1})'  # condition status: repeat count, time span
+  '#cond-status-pulsed': >  # condition status: pulse count, limit
+    (pulserat {0:d?<1000}{0:"&gt;999"?>=1000}{1:" av max "?>0}{1:d?>0} gång{1:"er"?!=1})
+  '#cond-status-latched': '(låst)'  # condition status
+  '#cond-status-waiting-time': 'väntar på {0}'  # condition status: time
+  '#cond-status-sustained': 'oavbruten'  # condition status
+  '#cond-status-resetdelay': 'fördröjd återställning'  # condition status
+  '#cond-status-pulsebreak': 'vilar'  # condition status
+  '#cond-status-pulsing': 'pulserar'  # condition status
+  '#cond-comment': 'Kommentar'  # condition type
+  '#cond-group': 'Grupp'  # condition type
+  '#cond-entity': 'Entitetsattribut'  # condition type
+  '#cond-var': 'Variabelvärde'  # condition type
+  '#cond-rule': 'Regelstatus'  # condition type
+  '#cond-weekday': 'Dagar'  # condition type
+  '#cond-trange': 'Datum/Tid'  # condition type
+  '#cond-sun': 'Soluppgång/Solnedgång'  # condition type
+  '#cond-interval': 'Intervall'  # condition type
+  '#cond-startup': 'Systemstart'  # condition type
+  '#cond-op-bet': 'mellan'  # condition op
+  '#cond-op-nob': 'inte mellan'  # condition op
+  '#cond-op-before': 'före'  # condition op
+  '#cond-op-after': 'efter'  # condition op
+  '#cond-op-starts': 'börjar med'  # condition op
+  '#cond-op-notstarts': 'börjar inte med'  # condition op
+  '#cond-op-ends': 'slutar med'  # condition op
+  '#cond-op-notends': 'slutar inte med'  # condition op
+  '#cond-op-contains': 'innehåller'  # condition op
+  '#cond-op-notcontains': 'innehåller inte'  # condition op
+  '#cond-op-in': 'i'  # condition op
+  '#cond-op-notin': 'inte i'  # condition op
+  '#cond-op-istrue': 'är SANT'  # condition op
+  '#cond-op-isfalse': 'är FALSKT'  # condition op
+  '#cond-op-isnull': 'är NULL'  # condition op
+  '#cond-op-isval': 'är inte NULL'  # condition op
+  '#cond-op-change': 'ändras'  # condition op
+  'Must be numeric.': 'Måste vara numerisk.'  # error text
+  'Must be integer.': 'Måste vara heltal.'  # error text
+  'Must be integer > 0': 'Måste vara heltal > 0'  # error text
+  'Must be integer >= 0': 'Måste vara numerisk >= 0.'  # error text
+  'Must be integer > 1': 'Måste vara heltal > 1'  # error text
+  'Must be integer 0-23': 'Måste vara heltal 0-23'  # error text, hours validation
+  'Must be integer 0-59': 'Måste vara heltal 0-59'  # error text, minutes validation
+  'Invalid boolean value.': 'Ogiltigt booleskt värde.'  # error text
+  'Must be in numeric range 1970-2199': 'Måste vara numeriskt mellan 1970-2199'  # error text, year validation
+  'Invalid year; range 2018 - 2100': Ogiltigt årtal; mellan 2018 - 2100'  # error text, year validation
+  'Invalid year.': 'Ogiltigt årtal.'  # error text
+  'Invalid entity': 'Ogiltig entitet'  # error text
+  'Substitution not permitted here.': 'Substitut är inte tillåtet här.'  # error text
+  'Please select a condition; if none listed, none are eligible and you cannot use this mode.': >
+    Vänligen välj ett villkor; om inget listas, är inget länmpligt och du kan inte använda detta läge.
+  "Can't find referenced entity!": "Kan inte hitta refererad entitet!"
+  'This attribute is not present in the entity.': 'Det här attributet finns inte i denna entitet.'
+  'Current value: not set': 'Nuvarande värde: inte satt'
+  'Current value: ({0}) {1}': 'Nuvarande värde: ({0}) {1:=64s}{1:"..."?#>64}'
+  'The string is blank/empty.': 'Strängen är blank/tom.'
+  'This expression has not been evaluated or no longer exists.': 'Det här uttrycket har inte utvärderats eller finns inte längre.'
+  '{0} (missing entity) {1}': '{0} (saknad entitet) {1}'  # entity unknown, entity ID, attribute name
+  '(missing rule {0:q}) {1}': '(saknad regel {0:q}) {1}'  # rule unknown, rule ID, variable name
+  '(global expression) {0}': '(globalt uttryck) {0}'  # global, variable name
+  '(case-sensitive)': '(skiftlägeskänslig)'  # case-sensitive test condition
+  '{0} (missing rule)': '{0} (saknad regel)'  # rule condition, missing rule ID
+  # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
+  '#sun-desc-after': 'efter {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-before': 'före {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-bet': >
+    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
+    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+  '#sun-desc-nob': >
+    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
+    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+  '#weekday-desc-': 'varje vecka på {0}'  # weekdays
+  '#weekday-desc-1': 'på den första {0} i varje månad'
+  '#weekday-desc-2': 'på den andra {0} i varje månad'
+  '#weekday-desc-3': 'på den tredje {0} i varje månad'
+  '#weekday-desc-4': 'på den fjärde {0} i varje månad'
+  '#weekday-desc-5': 'på den femte {0} i varje månad'
+  '#weekday-desc-L': 'på den sista {0} i varje månad'
+  '#trange-DMY': '{4}'  # year, month, day, month name abbreviated, default locale string
+  '#trange-DM': '{3}'  # month, day, month name abbreviated, default locale string
+  '#trange-D': 'dag {0} varje månad'  # day
+  '#trange-at-date-time': '{0} vid {1}'  # date (from trange-DMY/DM/D), time
+  '#trange-desc-after': 'efter {0}'  # date/time or time
+  '#trange-desc-before': 'före {0}'  # date/time or time
+  '#trange-desc-bet': 'från {0} till {1}'  # start, end
+  '#trange-desc-nob': 'inte mellan {0} och {1}'  # start, end
+  '#interval-desc': >  # days, hrs, mins
+    varje {0:d?>0}{0:" dag"?>0}{0:"ar"?>1} {1:d?>0}{1:" timm"?>0}{1:"e"?=1}{1:"ar"?>1} {2:d?>0}{2:" minut"?>0}{2:"er"?>1}
+  '#interval-condrel': '(i förhållande till {0})'  # condition description or date/time
+  'yyyy': 'åååå'  # year input field placeholder text
+  '#cond-nocase': 'Ignorera&nbsp;skiftläge'  # checkbox label (note html non-breaking space)
+  '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
+    {0:"inom "?>0}{0:d?>0}{0:" sekund"?>0}{0:"er"?>1} efter {1:q}{2:" (vilket fortfarande är SANT)"?sant}
+  '#condopt-repeat': 'repeteras {0} gång{0:"er"?>1} inom {1} sekund{1:"er"?>1}'
+  '#condopt-sustain': 'i {0:"mindre än "?:<}{0:"åtminstone "?!:<}{1} sekund{1:"er"?>1}'
+  '#condopt-hold': 'fördröj återställning i {0} sekund{0:"er"?>1}'
+  '#condopt-pulse': 'pulsera i {0} sekund{0:"er"?>1}{1:", repetera efter "?>0}{1:d?>0}{1:" sekund"?>0}{1:"er"?>1}{2:" upp till "?>0}{2:d?>0}{2:" gång"?>0}{2:"er"?>1}'
+  '#condopt-latch': 'låst'
+  'Local Rule Variables': 'Lokala regelvariabler'  # option group header
+  'Global Variables': 'Globala variabler'  # option group header
+  'Output Control': 'Utmatningskontroll'  # condition options control group title
+  '#condoutput-follow-label': 'Följ (standard) - utmatning förblir sann så länge villkoret matchar'
+  '#condoutput-form-delayreset': 'fördröj återställning {0} sekunder (0=ingen fördröjning)'
+  '#condoutput-pulse-label': 'Pulsera - utmatning är sann i'
+  '#condoutput-form-pulsetime': '{0} sekunder'  # form field
+  '#condoutput-pulse-once': 'en gång'  # option text
+  '#condoutput-pulse-repeat': 'repetera'  # option text
+  '#condoutput-form-pulserepeat': 'efter {0} sekunder'  # form field
+  '#condoutput-form-pulselimit': 'upp till {0} gånger (0/blankt=ingen&nbsp;begränsning)'
+  '#condoutput-latch': 'Lås - utmatning hålls sann tills syskon återställer'
+  'Restrictions': 'Restriktioner'  # condition options restrictions group title
+  '#condrestrict-seqmenu': 'Villkor måste uppfyllas efter {0}'  # form field (condition menu)
+  '(any time/no sequence)': '(närsomhelst/ingen sekvens)'  # sequence option menu default
+  '#condrestrict-seq-time': 'inom {0} sekunder (0 = ingen tidsbegränsning)'  # form field
+  '#condrestrict-seq-mode': 'Företrädare måste fortfarande vara sann för att uppfylla denna restriktion'  # checkbox label
+  '#condrestrict-sustain': 'Villkor måste vara oavbruten i {0}{1} sekunder'  # menu, input field
+  '#condrestrict-sustain-atleast': 'åtminstone'
+  '#condrestrict-sustain-lessthan': 'mindre än'
+  '#condrestrict-repeat': 'Villkor måste upprepas {0} gånger inom {1} sekunder'  # input field, input field
+  'Weekend': 'Helg'  # term for Saturday and Sunday
+  'Weekday': 'Veckodagar'  # term for Monday - Friday
+  '#condform-sunstart': '{0} kompensation {1} minuter'  # Sun condition start, time menu, offset input field
+  '#condform-sunend': 'och {0} kompensation {1} minuter'  # Sun condition end, time menu, offset input field
+  '#condform-trange-daily': '(varje dag)'  # Date/Time condition menu default
+  '#condform-trange-monthly': '(varje månad)'  # Date/Time condition menu default
+  '#condform-trange-year-tip': 'År, eller lämna blankt för varje år'
+  '#condform-interval-when': 'varje {0} dag {1} timmar {2} minuter'  # form fields days, hours, minutes
+  '#condform-interval-days-tip': 'Skriv ett heltal >= 0; timmar och minuter måste vara 0!'  # input field tip
+  '#condform-interval-hours-tip': 'Skriv ett heltal >= 0'  # input field tip
+  '#condform-interval-mins-tip': 'Skriv ett heltal >= 0'  # input field tip
+  '#condform-interval-rel': 'i förhållande till {0}'  # base selector (menu)
+  '#condform-interval-relopt-time': 'Tid'  # menu item
+  '#condform-interval-relopt-cond': 'Villkor SANT'  # menu item
+  'Enter new group name': 'Skriv nytt gruppnamn'  # group rename
+  '#cond-collapsed-count': '({0:d} villkor kollapsa{0:"t"?=1}{0:"de"?!=1})'
+  # Import Rule modal dialog
+  '#cond-import-title': 'Importera regel som grupp'
+  '#cond-import-select-label': 'Välj regel att importera:'  # dialog text
+  '#cond-import-select-trig': 'Utlösare'  # dialog radio button
+  '#cond-import-select-cons': 'Villkor'  # dialog radio button
+  '#cond-import-button-import': 'Importera regel'
+  '#cond-import-button-cancel': 'Avbryt'
+  # Group Export modal dialog
+  '#cond-export-title': 'Exportera grupp till regel'
+  '#cond-export-prompt': >
+    Är du säker på att du vill exportera denna grupp till en regel? Den kommer att bytas ut med ett "Regel" villkor som refererar till den nya regeln, för att behålla logiken.
+  '#cond-export-button-export': 'Exportera'
+  '#cond-export-button-cancel': 'Avbryt'
+  # Delete Group modal dialog
+  '#cond-delgroup-title': 'Ta bort grupp'
+  '#cond-delgroup-prompt': >
+    Den här gruppen har villkor och/eller undergrupper, som alla kommer att tas bort också. Är du säker på att du vill ta bort den här gruppen?
+  '#cond-delgroup-button-delete': 'Ta bort'
+  '#cond-delgroup-button-cancel': 'Avbryt'
+  # Delete Condition modal dialog
+  '#cond-delcond-title': 'Ta bort villkor'
+  '#cond-delcond-prompt': >
+    Det här villkoret används i ett sekvensalternativ i ett annat villkor. Klicka på OK för att ta bort det och koppla ifrån sekvensen, eller Avbryt för att lämna allt oförändrat.
+  '#cond-delcond-button-delete': 'OK'
+  '#cond-delcond-button-cancel': 'Avbryt'
+  # Unsaved Changes modal dialog
+  '#ruleedit-unsaved-title': 'Regel modifierad (Osparade ändringar)'
+  '#ruleedit-unsaved-prompt': 'Du har osparade ändringar i den här regeln. Är du säker på att du vill ångra ändringar och avsluta?'
+  '#ruleedit-unsaved-button-discard': 'Ångra ändringar'
+  '#ruleedit-unsaved-button-cancel': 'Avbryt'
+  # Condition group and row tools
+  'Click to change group name': 'Klicka för att ändra gruppnamn'  # tooltip
+  'Show condition options': 'Visa villkorsalternativ'  # tooltip
+  'Hide condition options': 'Dölj villkorsalternativ'  # tooltip
+  'Move condition (drag)': 'Flytta villkor (dra)'  # tooltip
+  'Move group (drag)': 'Flytta grupp (dra)'  # tooltip
+  'Delete condition': 'Ta bort villkor'  # tooltip
+  'Delete group': 'Ta bort grupp'  # tooltip
+  '#cond-group-not-tip': 'Invertera resultatet av OCH/ELLER/XOR'  # tooltip
+  '#cond-group-and-tip': 'OCH betyder att gruppen endast är sann om alla villkor/undergrupper är sanna'  # tooltip
+  '#cond-group-or-tip': 'Eller betyder att gruppen är sann om någon av villkoren/undergrupper är sanna'  # tooltip
+  '#cond-group-xor-tip': 'XOR (antingen eller) betyder att gruppen är sann om ett och endast ett villkor/undergrupp är sann'  # tooltip
+  '#cond-group-nul-tip': 'NUL betyder att gruppen inte påverkar logiken i föräldergruppen'  # tooltip
+  '#cond-group-disable-tip': "Inaktiverade grupper ignoreras, som om de inte existerade (tillstånd utvärderas inte)"  # tooltip
+  'Edit group name': 'Redigera gruppnamn'  # tooltip
+  'Export to Rule': 'Exportera till regel'  # tooltip
+  '#cond-button-addcond': 'Lägg till villkor'
+  'Add condition to this group': 'Lägg till villkor till den här gruppen'  # tooltip
+  '#cond-button-addgroup': 'Lägg till grupp'
+  'Add subgroup to this group': 'Lägg till undergrupp till den här gruppen'  # tooltip
+  '#cond-button-importrule': 'Importera regel'
+  'Import Rule as group': 'Importera regel som grupp'  # tooltip
+  'imported triggers': 'importerade utlösare'  # appended to group name on import
+  'imported constraints': 'importerade villkor'  # appended to group name on import
+  '#cond-group-op-not': 'INTE'
+  '#cond-group-op-and': 'OCH'
+  '#cond-group-op-or': 'ELLER'
+  '#cond-group-op-xor': 'XOR'
+  '#cond-group-op-nul': 'NUL'
+  '#cond-group-state-disabled': 'INAKTIVERAD'
+  '#cond-button-disable': ' INAKTIVERA '
+  '#cond-opchange-title': 'Byt operatör'
+  '#cond-opchange-msg': >
+    Att byta operatör på detta villkor kommer att ta bort de icke-standard villkorsalternativ som redan är satta. Fortsätta?
+
+  # Reaction Editor
+  '#reaction-comment': 'Kommentar'
+  '#reaction-entity': 'Entitetsåtgärd'
+  '#reaction-delay': 'Fördröj'
+  '#reaction-run': 'Kör Reaktion'
+  '#reaction-stop': 'Stoppa Reaktion'
+  '#reaction-setvar': 'Sätt Variabel'
+  '#reaction-notify': 'Notifiera'
+  '#reaction-request': 'HTTP begäran'
+  '#reaction-shell': 'Skalkommando'
+  '#reaction-group': 'Grupp'
+  # Group buttons/controls
+  '#reaction-button-addaction': 'Lägg till åtgärd'  # button label
+  '#reaction-button-import': 'Kopiera från'  # button label
+  '#reaction-button-import-tip': 'Importera en annan Reaktion till denna'  # tooltip
+  # Action row buttons/controls
+  '#reaction-button-import-spec': 'Importera vald reaktion'  # tooltip
+  '#reaction-button-tryone': 'Testa denna åtgärd'  # tooltip
+  '#reaction-button-clone': 'Klona åtgärd'  # tooltip
+  '#reaction-button-drag': 'Dra för att flytta/ordna'  # tooltip
+  '#reaction-button-remove': 'Ta bort åtgärd'  # tooltip
+  #
+  'Enter delay time in seconds, or MM:SS, or HH:MM:SS': 'Skriv in fördröjd tid i sekunder, eller MM:SS, eller HH:MM:SS'
+  'from this point': 'härifrån'
+  'from start of reaction': 'från början av reaktion'
+  "Enter value to be assigned to this variable.": "Skriv in ett värde som ska tilldelas denna variabel."  # tooltip
+  "Force re-evaluation of expressions and conditions": "Framtvinga ny utvärdering av uttryck och villkor"
+  "Message:": "Meddelande:"  # field label, notify action
+  "Request URL:": "Begäran URL:"  # field label, HTTP Request action
+  "Ignore self-signed/invalid SSL certificates": >  # checkbox label, HTTP Request action
+    Ignorera själv-signerade/ogiltiga SSL certifikat
+  'Request Headers:': 'Begäran huvuden:'  # field label, HTTP Request action
+  'Request Body:': 'Begäran brödtext:'  # field label, HTTP Request action
+  'Capture response to:': 'Fånga svar till:'  # field label, HTTP Request action
+  '(ignore/discard response)': '(ignorera/kassera svar)'  # menu option default, HTTP Request action
+  'Wait until request completes': 'Vänta tills begäran är slutförd'  # checkbox label, HTTP Request action
+  'Suppress alerts on HTTP errors': 'Tysta varningar vid HTTP fel'  # checkbox label, HTTP Request action
+  '#http-req-subst-notice': >  # HTTP Request action, may contain HTML
+    Notera: den här åtgärden tillåter susbstitut med syntax <tt>${{expr}}</tt> i alla textfält.
+  'Enter shell command to be executed.': 'Skriv in skalkommando som ska exekveras.'  # tooltip, Shell Command action
+  'Capture output (stdout) to:': 'Fånga utmatning (stdout) till:'  # field label, Shell Command action
+  '(ignore/discard output)': '(ignorera/kassera utmatning)'  # menu option default
+  'Ignore shell/command exit code': 'Ignorera skal/kommandots avslutskod'  # checkbox label, Shell Command action
+  # Rename Reaction modal dialog
+  '#reaction-rename-title': 'Byt namn på Reaktion'
+  '#reaction-rename-button-rename': 'Byt namn'
+  '#reaction-rename-button-cancel': 'Avbryt'
+  # Unsaved Changes modal dialog
+  '#reactionedit-unsaved-title': 'Reaktion modifierad (Osparade ändringar)'
+  '#reactionedit-unsaved-prompt': 'Du har osparade ändringar i denna reaktion. Är du säker på att du vill ångra ändringar och avsluta?'
+  '#reactionedit-unsaved-button-discard': 'Ångra ändringar'
+  '#reactionedit-unsaved-button-cancel': 'Avbryt'
+  # Try Action error dialog
+  "Insufficient Context": "Otillräckligt sammanhang"
+  "The single-action trial tool cannot be used when the action parameters contain variable/expression substitutions.": >
+    Testverktyget för enkelåtgärd kan bara användas när åtgärdsparametrarna innehåller ett substitut av en variabel/uttryck.
+  # Unrecognized Action error dialog
+  "Unsupported Action Type": "Inte stödd åtgärdstyp"
+  "Action type {0:q} unrecognized.": >
+    Åtgärdstypen {0:q} känns inte igen. Det här kan uppstå om du nedgraderar från en senare version av Reactor.
+    Jag kommer att försöka att bevara den här åtgärdstypen, men du kan inte redigera den.
+  # Other strings
+  'Change Reaction Name': 'Ändra Reaktionsnamn'  # tooltip
+  'Run Reaction Now': 'Kör Reaktion nu'
+  '{0} - Set': '{0} - Satt'  # Rule's set reaction: rule name or ID
+  '{0} - Reset': '{0} - Återställd'  # Rule's reset reaction: rule name or ID
+  'Must be integer > 0, or MM:SS or HH:MM:SS': 'Måste vara ett heltal > 0, eller MM:SS eller HH:MM:SS'
+  'Entity required': 'Entitet nödvändig'
+  'Selection required.': 'Urval nödvändig.'
+  'Must be http:// or https:// or substitution': 'Måste vara http:// eller https:// eller ett substitut'
+  'Invalid format': 'Ogiltigt format'
+  "Command contains illegal characters (line breaks)": "Kommandot innehåller ogiltiga tecken (radbrytningar)"
+  '"Try" button cannot be used when substitutions are used in parameters': >
+   "Testa" knappen kan inte användas när ett substitut är använt i parametrarna
+  'Try this action': 'Test den här åtgärden'
+  'Click for predefined values or enter your own': 'Klicka för fördefinierade värden eller ange ditt egna'
+  '(unspecified)': '(ospecificerad)'
+  'Group Constraints': 'Grupprestriktioner'
+  'Note: this action allows in-line substitutions in all request fields using <tt>${{expr}}</tt> syntax.': >
+    Notera: den här åtgärden tillåter susbstitut med syntax <tt>${{expr}}</tt> i alla begäranfält.
+  '#deprecated-action-use': '(inaktuell; använd {0:q})'  # 0=replacement action
+  '#deprecated-action': '(inaktuell utan ersättare)'
+  '; save response to {0:q} ({1})': '; spara svar till {0:q} ({1})'  # 0=varname, 1=rule
+  '; save response to {0:q} (local)': '; spara svar till {0:q} (lokal)'  # 0=varname
+  '; save response to {0:q} (global)': '; spara svar till {0:q} (global)'  # 0=varname
+
+  # Expression Editor
+  '#expr-status-no-data': '(ingen data)'  # status: no data
+  '#expr-status-not-set': '(har inte satts)'  # status: not set
+  '#expr-status-not-eval': '(har inte utvärderats)'  # status: no eval
+  '#expr-status-error': '(fel) {0}'  # eval error status: message
+  'Add Expression': 'Lägg till uttryck'  # button label
+  'Copy/Move From...': 'Kopiera/Flytta från...'  # button label
+  'Enter a variable name and then TAB out of the field.': 'Skriv ett variabelnamn och tryck sedan TAB för att byta fält.'
+  '(empty string)': '(tom sträng)'  # value hint
+  'Use&nbsp;Name': 'Använd&nbsp;namn'  # checkbox label
+  'Last value:': 'Senaste värde:'  # text label
+  '({0}) {1}': '({0}) {1}'  # value display; 0=localized type name, 1=value
+  '(not available: {0})': '(inte tillgänglig: {0})'  # status: reason
+  '(not available)': '(inte tillgänglig)'  # status (generic)
+  # Action buttons/icons
+  'Try this expression': 'Testa det här uttrycket'  # tooltip
+  'Auto-evaluate on dependency changes': 'Evaluera automatiskt när beroenden ändras'  # tooltip
+  'Helper: Insert entity attribute value function': 'Hjälpfunktion: Infoga ett entitetsattributsvärde'  # tooltip
+  'Change order (drag)': 'Ändra ordning (dra)'  # tooltip
+  'Delete this expression': 'Ta bort uttryck'  # tooltip
+  'since {0}': 'sedan {0}'  # date/time state last changed
+
+  # Delete Expression modal dialog
+  '#expression-delete-title': 'Ta bort uttryck'
+  '#expression-delete-prompt': 'Vid radering av {0:q} kommer villkor, åtgärder och andra uttryck som använder detta att sluta fungera, om det finns några som använder detta uttryck.'
+  '#expression-delete-button-delete': 'Ta bort'
+  '#expression-delete-button-cancel': 'Avbryt'
+  # Name Conflict (import) modal dialog
+  'Name Conflict': 'Namnkonfilkt'
+  '#expression-import-conflict-message': >
+    Det finns redan en variabel med namnet {0}. Ta först bort den först om du önskar att skriva över den.
+  # Expression Copy/Move modal dialog
+  '#expression-copy-title': 'Kopiera eller flytta uttryck?'
+  '#expression-copy-prompt': >
+    Vill du kopiera eller flytta uttrycket hit? Om du väljer "Flytta" så kommer det att tas bort från {0}.
+  '#expression-copy-button-copy': 'Kopiera'
+  '#expression-copy-button-move': 'Flytta'
+  '#expression-copy-button-cancel': 'Avbryt'
+
+  # Editor general strings
+  '#edit-button-save': 'Spara'  # button label
+  '#edit-button-exit': 'Avsluta'  # button label
+  "You have unsaved changes!": "Du har osparade ändringar!"
+  "Fix errors before saving": "Rätta fel innan du kan spara"  # tooltip
+  "No unsaved changes": "Inga osparade ändringar"  # tooltip
+
+  # Engine - only strings that appear in the UI are translated (e.g. alerts, names, etc.).
+  # Log messages are not translated.
+  '#recovery-name': 'Återskapade Regelgrupper'  # Name of recovery rule set
+  'The "test time" function is configured; Reactor is not operating in "real" time.': >
+    "testa-tid" funktionen är konfigurerad; Reactor körs inte i "nutid".
+  'The engine has been disabled and is not running (rules are not being processed).': >
+    Logikmotorn har avaktiverats och kör inte (regler bearbetas inte).
+  "An error occurred running performAction({0:q}, {1:q}, ...)": >  # 0=entitet ID, 1=åtgärdsnamn
+    Ett fel uppstod vid performAction({0:q}, {1:q}, ...)
+  "performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.": >
+    performAction({0:q}, {1:q}, ...) misslyckades eftersom specificerad entit inte kunde hittas.
+  "Unable to compile global expression {0:q}": "Kunde inte kompilera globalt uttryck {0:q}"  # 0=var name
+  "Unable to resolve global expression {0:q}": "Kunde inte utvärdera globalt uttryck {0:q}"  # 0=var name
+  "Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled": >
+    Reaktion {0:q} ({1}) steg {2} variabelsubstitut misslyckades eftersom uttrycket {3:q} inte kunde kompileras
+  "Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.": >
+    Regelreaktion {0:q} kunde inte exekveras eftersom förälderregeln ({1:q}) inte längre finns.
+  "Global Reaction with ID {0:q} could not be executed because it no longer exists.": >
+    Global reaktion med ID {0:q} kunde inte exekveras eftersom den inte längre finns.
+  "Reaction task {0:q} failed due to an exception. Please see the log.": >
+    Reaktionsuppgiften {0:q} misslyckades på grund av ett undantag. Vänligen undersök i loggfilen.
+  "Reaction {0:q} ({1}) step {2} delay ignored because the delay target time has already passed.": >
+    Reaktion {0:q} ({1}) steg {2} fördöjning ignorerad eftersom måltiden redan har passerat.
+  'from {0:s?!n}{0:"now"?} + {1} seconds': 'från {0:s?!n}{0:"nu"?} + {1} sekund{1:"er"?>1}'  # 0=delay start point, 1=delay length
+  "Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.": >
+    Reaktion {0:q} ({1}) steg {2} Entitetsåtgärden misslyckades efterom entitet {3:q} inte kunde hittas.
+  "Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.": >
+    Reaktion {0:q} ({1}) steg {2} notifieringsmetod {3} försökte men är inte konfigurerad.
+  "Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.": >
+    Reaktion {0:q} ({1}) steg {2} notifieringsmetod {3} kunde inte laddas/initialiseras på grund av ett fel.
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta JSON svar till variabel {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kunde inte hämta/analysera servern's JSON svar
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta servern's svar till variabel {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response": >
+    Reaction {0:q} ({1}) step {2} HTTP begäran kunde inte hämta svar från servern
+  "Reaction {0:q} ({1}) step {2} HTTP request failed": "Reaktion {0:q} ({1}) steg {2} HTTP begäran misslyckades"
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3:q}
+  "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}": >
+    "Reaktion {0:q} ({1}) steg {2} Sätt variabel, åtgärden misslyckades att sätta {3:q}
+  "Reaction {0:q} ({1}) step {2} Shell action failed command {3:q} ({4})": >
+    Reaktion {0:q} ({1}) steg {2} Skalåtgärd misslyckades med kommando {3:q} ({4})
+  "Reaction {0:q} ({1}) step {2} Shell can't save output in variable {3:q}": >
+    Reaktion {0:q} ({1}) steg {2} Skalet kan inte spara utmatning i variabel {3:q}
+  "Reaction {0:q} ({1}) step {2} Shell actions have not been enabled. See the docs!": >
+    Reaktion {0:q} ({1}) steg {2} Skalåtgärder har inte aktiverats. Se dokumentationen!
+  "Reaction {0:q} ({1}) step {2} contains an unknown action type": >
+    Reaktion {0:q} ({1}) steg {2} innehåller en okänd åtgärdstyp
+  "The expression {0:q} in a substitution in rule {1:q} ({2}) could not be evaluated": >
+    Uttrycket {0:q} i ett substitut i regel {1:q} ({2}) kunde inte utvärderas
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be compiled": >
+    Uttrycket {0:q} i variabel {1:q} i regel {2:q} ({3}) kunde inte kompileras
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) could not be evaluated": >
+    Uttrycket {0:q} i variabel {1:q} i regel {2:q} ({3}) kunde inte utvärderas
+  "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation": >
+    Uttrycket {0:q} i variabel {1:q} i regel {2:q} ({3}) misslyckades att utvärderas
+  "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
+    Regel {0:q} misslyckades att utvärderas på grund av ett fel. Vänligen undersök i loggfilen.
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
+    Ett entitetsattributs tillstånd i regel {0:q} misslyckades eftersom refererad entitet {1} inte kunde hittas
+  "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
+    Ett entitetsattributs tillstånd i regel {0:q} misslyckades eftersom refererad entitet {1} ({2}) har inte attribut {3}
+  'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
+    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till ett lokalt uttryck {1:q} som inte längre finns.
+  'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
+    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till ett uttryck {1:q} i regel {2:q} som inte längre finns.
+  'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
+    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till regel {1:q}, som inte längre finns.
+  "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
+    Det globala uttrycket {0:q} ({1}) kunde inte utvärderas
+  'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
+    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till det globala uttrycket {1:q}, som inte längre finns.
+  'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
+    Ett regelvillkor i regel {0:q} refererar till regel ({1}) som inte längre finns.
+  'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
+    Regel {0:q} misslyckades eftersom ett intervallvillkor refererar till ett beroende villkor som inte längre finns.
+  'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
+    Regel {0:q} misslyckades eftersom den innehåller ett villkor av typen {1}, vilket är en okänd villkorstyp
+  "Invalid/unsupported condition type {0:q} in {1:q}": "Ogiltigt/ej stödd villkorstyp {0:q} i {1:q}"  # 0=cond type, 1=cond ID
+  'Rule {0:q} could not start because of an error; please refer to the log file.': >
+    Regel {0:q} kunde inte starta på grund av ett fel; vänligen se loggfilen.
+  "Rule {0:q} does not exist": "Regel {0:q} finns inte"  # 0=ruleID
+  "Global expression {0:q} not defined": "Globalt uttryck {0:q} inte definierat"  # 0=var name
+  "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
+    Globalt uttryck {0:q} är uttrycksdrivet och kan inte sättas
+  'Controller {0:q} is off-line!': 'Kontroller {0:q} är nedkopplad!'  # 0=controller ID
+  "Add your rule's triggers here": "Lägg till din regels utlösare här"  # default comment in empty rule
+  "Add your actions here.": "Lägg till dina åtgärder här."  # default comment in empty reaction
+
+  # General use strings
+  'Reactor': 'Reactor'
+  '#opt-choose': '--välj--'  # general "pick something" default for menus/dropdowns
+  '#data-type-string': 'sträng'
+  '#data-type-number': 'nummer'
+  '#data-type-boolean': 'booleskt'
+  '#data-type-object': 'objekt'
+  '#data-type-array': 'samling'
+  '#data-type-array-len': 'samling:{0}'  # type with length, 0=array length
+  '#data-type-undefined': 'odefinierad'
+  '#data-type-null': 'utan värde'
+  'false': 'falskt'  # binary false, common use
+  'true': 'sant'    # binary true, common use
+  'null': 'inget värde'    # null value, common use
+  'OK': 'OK'        # dialog button text, proceed with operation
+  'Cancel': 'Avbryt'  # dialog button text, don't do operation
+  'SET': 'AKTIV'      # Reaction state: SET
+  'RESET': 'ÅTERSTÄLLD'  # Reaction state: RESET
+  'Entities': 'Entiteter'
+  'sunrise': 'soluppgång'
+  'sunset': 'solnedgång'
+  'civdawn': 'gryning'
+  'civdusk': 'skymning'
+  'nautdawn': 'nautisk gryning'
+  'nautdusk': 'nautisk skymning'
+  'astrodawn': 'astronomisk gryning'
+  'astrodusk': 'astronomisk skymning'
+  'solarnoon': 'solmiddag'
+  'Expand group': 'Expandera grupp'
+  'Collapse group': 'Fäll ihop grupp'
+  'Global Reactions': 'Globala Reaktioner'
+  'Rule Set: {0}': 'Regelgrupp: {0}'  # headings/titles: rule set name
+  'Rule: {0}': 'Regel: {0}'  # headings/titles: rule name or ID
+  'Group {0}': 'Grupp {0}'  # headings/titles: group name or ID
+  '{0} (global)': '{0} (global)'  # headings/titles: var/expr/reaction name
+  'Capability: {0}': 'Förmåga: {0}'  # option group heading in attributes selector
+  '{0} (no value)': '{0} (inget värde)'  # selected attribute missing, attribute name
+  '{0} (primary)': '{0} (primär)'  # select attribute is primary, attribute name
+  'blank=any value': 'blankt=något värde'  # input field placeholder
+  'Extended Attributes': 'Utökade attribut'  # option group heading in attributes selector
+  '(no eligible attributes)': '(inga valbara attribut)'  # option entry when no attributes available
+  '{0}? (missing)': '{0}? (missing)'  # missing attribute, entity, etc.; 0=item name
+  '#dialog-error-title': 'Fel'
+  '#dialog-warning-title': 'Varning'
+  'The operation cannot be completed at this time.': 'Åtgärden kan inte slutföras för tillfället.'
+  'The save failed; try again. {0}': 'Misslyckades att spara; försök igen. {0}'  # exception
+  'Operation in Progress': 'Åtgärden pågår'
+  'Please complete the current operation before switching views': 'Vänligen slutför pågående ändringar innan du byter vy.'
+  'Loading...': 'Laddar...'
+  'Enabled; click to disable': 'Aktiverad; klicka för att avaktivera'
+  'Disabled; click to enable': 'Avaktiverad; klicka för att aktivera'
+  'Required value.': 'Nödvändigt värde.'  # error text
+  'Click to select entity': 'Klicka för att välja entitet'  # entity picker
