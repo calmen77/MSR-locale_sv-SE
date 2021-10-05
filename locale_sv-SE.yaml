@@ -24,8 +24,8 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21277  # update this to the Julian date (YYDDD) of your published translation
-locale: sv
+version: 21278  # update this to the Julian date (YYDDD) of your published translation
+locale: sv-SE
 description: Svenska
 author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
 maintainer: "Crille, https://smarthome.community/user/crille"
@@ -42,7 +42,7 @@ ref_version: 21277
 # your attribution will be shown on the "About" page (plain text only; no HTML).
 attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); offered under MIT License."
 # Your github user ID and repository name for this translation
-github_repository: calmen77/MSR-locale_sv
+github_repository: calmen77/MSR-locale_sv-SE
 
 # Number formatting
 decimal_sep: ','
@@ -657,15 +657,15 @@ strings:
   "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} ({2}) does not have attribute {3}": >
     Ett entitetsattributs tillstånd i regel {0:q} misslyckades eftersom refererad entitet {1} ({2}) har inte attribut {3}
   'An "Expression Value" condition in rule {0:q} references a local expression {1:q} that no longer exists.': >
-    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till ett lokalt uttryck {1:q} som inte längre finns.
+    Tillståndet av ett uttrycksvärde i regel {0:q} refererar till ett lokalt uttryck {1:q} som inte längre finns.
   'An "Expression Value" condition in rule {0:q} references an expression {1:q} of rule {2:q} that no longer exists.': >
-    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till ett uttryck {1:q} i regel {2:q} som inte längre finns.
+    Tillståndet av ett uttrycksvärde i regel {0:q} refererar till ett uttryck {1:q} i regel {2:q} som inte längre finns.
   'An Expression Value condition in rule {0:q} references rule {1:q}, which no longer exists.': >
-    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till regel {1:q}, som inte längre finns.
+    Tillståndet av ett uttrycksvärde i regel {0:q} refererar till regel {1:q}, som inte längre finns.
   "The global expression {0:q} ({1}) could not be evaluated": >  # 0=name 1=expression
     Det globala uttrycket {0:q} ({1}) kunde inte utvärderas
   'An "Expression Value" condition in rule {0:q} references global expression {1:q}, which no longer exists.': >
-    Ett "Uttrycksvärde"s tillstånd i regel {0:q} refererar till det globala uttrycket {1:q}, som inte längre finns.
+    Tillståndet av ett uttrycksvärde i regel {0:q} refererar till det globala uttrycket {1:q}, som inte längre finns.
   'A Rule condition in rule {0:q} references a rule ({1}) that no longer exists.': >
     Ett regelvillkor i regel {0:q} refererar till regel ({1}) som inte längre finns.
   'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
@@ -679,7 +679,7 @@ strings:
   "Global expression {0:q} not defined": "Globalt uttryck {0:q} inte definierat"  # 0=var name
   "Global expression {0:q} is expression-driven and cannot be set": >  # 0=var name
     Globalt uttryck {0:q} är uttrycksdrivet och kan inte sättas
-  'Controller {0:q} is off-line!': 'Kontroller {0:q} är nedkopplad!'  # 0=controller ID
+  'Controller {0:q} is off-line!': 'Kontroller {0:q} är frånkopplad!'  # 0=controller ID
   "Add your rule's triggers here": "Lägg till din regels utlösare här"  # default comment in empty rule
   "Add your actions here.": "Lägg till dina åtgärder här."  # default comment in empty reaction
 
@@ -724,12 +724,12 @@ strings:
   'blank=any value': 'blankt=något värde'  # input field placeholder
   'Extended Attributes': 'Utökade attribut'  # option group heading in attributes selector
   '(no eligible attributes)': '(inga valbara attribut)'  # option entry when no attributes available
-  '{0}? (missing)': '{0}? (missing)'  # missing attribute, entity, etc.; 0=item name
+  '{0}? (missing)': '{0}? (saknas)'  # missing attribute, entity, etc.; 0=item name
   '#dialog-error-title': 'Fel'
   '#dialog-warning-title': 'Varning'
   'The operation cannot be completed at this time.': 'Åtgärden kan inte slutföras för tillfället.'
   'The save failed; try again. {0}': 'Misslyckades att spara; försök igen. {0}'  # exception
-  'Operation in Progress': 'Åtgärden pågår'
+  'Operation in Progress': 'Pågående ändringar'
   'Please complete the current operation before switching views': 'Vänligen slutför pågående ändringar innan du byter vy.'
   'Loading...': 'Laddar...'
   'Enabled; click to disable': 'Aktiverad; klicka för att avaktivera'
