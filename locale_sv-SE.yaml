@@ -296,7 +296,7 @@ strings:
   '#cond-op-isval': 'är inte NULL'  # condition op
   '#cond-op-change': 'ändras'  # condition op
   '#cond-desc-between': '{0} och {1}'  # condition operands for between/not between
-  '#cond-desc-changes': 'fån {0} till {1}'  # condition operands for changes
+  '#cond-desc-changes': 'från {0} till {1}'  # condition operands for changes
   '(any)': '(något)'  # change operand - any value
   'Must be numeric.': 'Måste vara numerisk.'  # error text
   'Must be integer.': 'Måste vara heltal.'  # error text
