@@ -24,7 +24,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21278  # update this to the Julian date (YYDDD) of your published translation
+version: 21281  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
@@ -36,11 +36,11 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21277
+ref_version: 21278
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
-attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); offered under MIT License."
+attribution: "Svensk översättning av Crille(Crille on the Smart Home Community);v.21281; offered under MIT License."
 # Your github user ID and repository name for this translation
 github_repository: calmen77/MSR-locale_sv-SE
 
@@ -245,6 +245,8 @@ strings:
   '(any controller)': '(någon kontroller)'
   '(any group)': '(någon grupp)'
   '(any capability)': '(någon förmåga)'
+  '#ep-col-entity': 'Entitet'  # column label
+  '#ep-col-id': 'ID'  # column label
 
   # Rule Editor
   '#ruleedit-triggers-title': 'Utlösare'
@@ -293,6 +295,9 @@ strings:
   '#cond-op-isnull': 'är NULL'  # condition op
   '#cond-op-isval': 'är inte NULL'  # condition op
   '#cond-op-change': 'ändras'  # condition op
+  '#cond-desc-between': '{0} och {1}'  # condition operands for between/not between
+  '#cond-desc-changes': 'fån {0} till {1}'  # condition operands for changes
+  '(any)': '(något)'  # change operand - any value
   'Must be numeric.': 'Måste vara numerisk.'  # error text
   'Must be integer.': 'Måste vara heltal.'  # error text
   'Must be integer > 0': 'Måste vara heltal > 0'  # error text
