@@ -245,6 +245,8 @@ strings:
   '(any controller)': '(någon kontroller)'
   '(any group)': '(någon grupp)'
   '(any capability)': '(någon förmåga)'
+  '#ep-col-entity': 'Entitet'  # column label
+  '#ep-col-id': 'ID'  # column label
 
   # Rule Editor
   '#ruleedit-triggers-title': 'Utlösare'
@@ -256,7 +258,7 @@ strings:
   '#rule-state-true': 'AKTIV'  # condition state: set (true)
   '#rule-state-false': 'återställd'  # condition state: reset (false)
   '{0} -- {1} as of {2}': >  # condition state; 0=cond state, 1=eval state, 2=formatted date/time, 3=raw date/time
-    {0:=64s}{0:"..."?#>64} -- {1:T} sedan {2}
+    {0:=64s}{0:"..."?#>64} -- {1} sedan {2}
   '#cond-status-repeats': '(senaste {0} spann {1:.1f} sekund{1:"er"?!=1})'  # condition status: repeat count, time span
   '#cond-status-pulsed': >  # condition status: pulse count, limit
     (pulserat {0:d?<1000}{0:"&gt;999"?>=1000}{1:" av max "?>0}{1:d?>0} gång{1:"er"?!=1})
@@ -293,6 +295,9 @@ strings:
   '#cond-op-isnull': 'är NULL'  # condition op
   '#cond-op-isval': 'är inte NULL'  # condition op
   '#cond-op-change': 'ändras'  # condition op
+  '#cond-desc-between': '{0} och {1}'  # condition operands for between/not between
+  '#cond-desc-changes': 'från {0} till {1}'  # condition operands for changes
+  '(any)': '(något)'  # change operand - any value
   'Must be numeric.': 'Måste vara numerisk.'  # error text
   'Must be integer.': 'Måste vara heltal.'  # error text
   'Must be integer > 0': 'Måste vara heltal > 0'  # error text
