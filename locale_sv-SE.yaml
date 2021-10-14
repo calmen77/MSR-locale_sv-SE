@@ -459,9 +459,9 @@ strings:
   '#cond-group-op-nul': 'NUL'
   '#cond-group-state-disabled': 'INAKTIVERAD'
   '#cond-button-disable': ' INAKTIVERA '
-  '#cond-opchange-title': 'Byt operatör'
+  '#cond-opchange-title': 'Byt operator'
   '#cond-opchange-msg': >
-    Att byta operatör på detta villkor kommer att ta bort de icke-standard villkorsalternativ som redan är satta. Fortsätta?
+    Att byta operator på detta villkor kommer att ta bort de icke-standard villkorsalternativ som redan är satta. Fortsätta?
 
   # Reaction Editor
   '#reaction-comment': 'Kommentar'
