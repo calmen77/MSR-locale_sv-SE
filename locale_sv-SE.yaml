@@ -4,6 +4,7 @@
 # This file is NOT included under the Reactor EULA, and is licensed separately
 # under the MIT License:
 #
+# (C) 2021 Crille (Swedish translation)
 # (C) 2021 Patrick Rigney (US English/reference file)
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,10 +25,10 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21284  # update this to the Julian date (YYDDD) of your published translation
+version: 21287  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
-author: "Patrick H. Rigney (rigpapa), https://smarthome.community/user/toggledbits"
+author: "Crille, https://smarthome.community/user/crille"
 maintainer: "Crille, https://smarthome.community/user/crille"
 
 # Translators: update ref_version to reflect the version of the US English file used to
@@ -36,11 +37,11 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21284
+ref_version: 21286
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
-attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); v.21284; offered under MIT License."
+attribution: "Svensk översättning av Crille (Crille on the Smart Home Community); offered under MIT License."
 # Your github user ID and repository name for this translation
 github_repository: calmen77/MSR-locale_sv-SE
 
@@ -687,6 +688,10 @@ strings:
   'Controller {0:q} is off-line!': 'Kontroller {0:q} är frånkopplad!'  # 0=controller ID
   "Add your rule's triggers here": "Lägg till din regels utlösare här"  # default comment in empty rule
   "Add your actions here.": "Lägg till dina åtgärder här."  # default comment in empty reaction
+  '#rule-update-rate': >
+    Regel {0:q} är nedstrypt eftersom uppdateringsfrekvensen överstiger {1} uppdateringar per minut. Kontrollera om det finns logiska fel som orsakar en evalueringsloop eller om en enhet "fladdrar".
+  '#rule-change-rate': >
+    Regel {0:q} är nedstrypt eftersom den har bytt status mer än {1} gånger den senaste minuten. Kontrollera om den innehåller en "fladdrande" enhet eller om du har en loop in din logik.
 
   # General use strings
   'Reactor': 'Reactor'
