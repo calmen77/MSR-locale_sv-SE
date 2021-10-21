@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21287  # update this to the Julian date (YYDDD) of your published translation
+version: 21294  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -597,7 +597,7 @@ strings:
 
   # Engine - only strings that appear in the UI are translated (e.g. alerts, names, etc.).
   # Log messages are not translated.
-  '#recovery-name': 'Återskapade Regelgrupper'  # Name of recovery rule set
+  '#recovery-name': 'Återskapade Regler'  # Name of recovery rule set
   'The "test time" function is configured; Reactor is not operating in "real" time.': >
     "testa-tid" funktionen är konfigurerad; Reactor körs inte i "nutid".
   'The engine has been disabled and is not running (rules are not being processed).': >
