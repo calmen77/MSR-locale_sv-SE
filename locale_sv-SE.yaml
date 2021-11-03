@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21294  # update this to the Julian date (YYDDD) of your published translation
+version: 21307  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21286
+ref_version: 21305
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -142,6 +142,7 @@ strings:
   'Recently Changed Entities': 'Nyligen ändrade Entiteter'  # card title
   'Current Alerts': 'Nuvarande varningar'  #card title
   "There are no current alerts.": "Det finns inga nuvarande varningar."
+  '#alert-time-last': 'Senast {0}'  # Alert last occurrence; 0=formatted/locale short time, 1=raw timestamp
   "; this alert has repeated {0:d} times.": '; den här varningen har upprepats {0:d} gång{0:"er"?!=1}.'  # count
   'Dismiss Alert': 'Avfärda varning'  # title text for dismiss button (hover)
   'Clear All': 'Rensa alla'  # card menu item
@@ -491,12 +492,15 @@ strings:
   "Enter value to be assigned to this variable.": "Skriv in ett värde som ska tilldelas denna variabel."  # tooltip
   "Force re-evaluation of expressions and conditions": "Framtvinga ny utvärdering av uttryck och villkor"
   "Message:": "Meddelande:"  # field label, notify action
-  "Request URL:": "Begäran URL:"  # field label, HTTP Request action
+  "Request URL:": "URL:"  # field label, HTTP Request action
   "Ignore self-signed/invalid SSL certificates": >  # checkbox label, HTTP Request action
-    Ignorera själv-signerade/ogiltiga SSL certifikat
-  'Request Headers:': 'Begäran huvuden:'  # field label, HTTP Request action
-  'Request Body:': 'Begäran brödtext:'  # field label, HTTP Request action
-  'Capture response to:': 'Fånga svar till:'  # field label, HTTP Request action
+    Ignorera självsignerade/ogiltiga SSL certifikat
+  'Request Headers:': 'HTTP-huvuden:'  # field label, HTTP Request action
+  'Request Body:': 'HTTP brödtext:'  # field label, HTTP Request action
+  'HTTP Auth Type:': 'HTTP Autentiseringstyp:'  # field label, HTTP Request Action
+  'Username:': 'Användarnamn:'  # field label, HTTP Request Action
+  'Password:': 'Lösenord:'  # field label, HTTP Request Action
+  'Capture response to:': 'Spara svar till:'  # field label, HTTP Request action
   '(ignore/discard response)': '(ignorera/kassera svar)'  # menu option default, HTTP Request action
   'Wait until request completes': 'Vänta tills begäran är slutförd'  # checkbox label, HTTP Request action
   'Suppress alerts on HTTP errors': 'Tysta varningar vid HTTP fel'  # checkbox label, HTTP Request action
@@ -608,8 +612,8 @@ strings:
     performAction({0:q}, {1:q}, ...) misslyckades eftersom specificerad entit inte kunde hittas.
   "Unable to compile global expression {0:q}": "Kunde inte kompilera globalt uttryck {0:q}"  # 0=var name
   "Unable to resolve global expression {0:q}": "Kunde inte utvärdera globalt uttryck {0:q}"  # 0=var name
-  "Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled": >
-    Reaktion {0:q} ({1}) steg {2} variabelsubstitut misslyckades eftersom uttrycket {3:q} inte kunde kompileras
+  "#reaction-subst-failed-eval": >
+    Reaktion {0:q} ({1}) steg {2} utbyte misslyckades eftersom uttrycket {3:q} inte kunde evalueras
   "Rule reaction {0:q} could not be executed because the parent rule ({1:q}) no longer exists.": >
     Regelreaktion {0:q} kunde inte exekveras eftersom förälderregeln ({1:q}) inte längre finns.
   "Global Reaction with ID {0:q} could not be executed because it no longer exists.": >
@@ -625,19 +629,9 @@ strings:
     Reaktion {0:q} ({1}) steg {2} notifieringsmetod {3} försökte men är inte konfigurerad.
   "Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.": >
     Reaktion {0:q} ({1}) steg {2} notifieringsmetod {3} kunde inte laddas/initialiseras på grund av ett fel.
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}": >
-    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta JSON svar till variabel {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response": >
-    Reaktion {0:q} ({1}) steg {2} HTTP begäran kunde inte hämta/analysera servern's JSON svar
   "Reaction {0:q} ({1}) step {2} HTTP request can't set server response to variable {3}": >
     Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta servern's svar till variabel {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response": >
-    Reaction {0:q} ({1}) step {2} HTTP begäran kunde inte hämta svar från servern
   "Reaction {0:q} ({1}) step {2} HTTP request failed": "Reaktion {0:q} ({1}) steg {2} HTTP begäran misslyckades"
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}": >
-    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3}
-  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
-    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3:q}
   "Reaction {0:q} ({1}) step {2} Set Variable action failed setting {3:q}": >
     "Reaktion {0:q} ({1}) steg {2} Sätt variabel, åtgärden misslyckades att sätta {3:q}
   "Reaction {0:q} ({1}) step {2} Shell action failed command {3:q} ({4})": >
@@ -747,3 +741,18 @@ strings:
   'Required value.': 'Nödvändigt värde.'  # error text
   'Click to select entity': 'Klicka för att välja entitet'  # entity picker
   'Link to documentation for topic': 'Länk till dokumentation för ämnet (engelska)'
+
+# disused as of 21305
+
+  "Reaction {0:q} ({1}) step {2} variable substitution failed because the expression {3:q} could not be compiled": >
+    Reaktion {0:q} ({1}) steg {2} variabelsubstitut misslyckades eftersom uttrycket {3:q} inte kunde kompileras
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set JSON response to variable {3}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta JSON svar till variabel {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve/parse server's JSON response": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kunde inte hämta/analysera servern's JSON svar
+  "Reaction {0:q} ({1}) step {2} HTTP request couldn't retrieve server's response": >
+    Reaction {0:q} ({1}) steg {2} HTTP begäran kunde inte hämta svar från servern
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3}
+  "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
+    Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3:q}
