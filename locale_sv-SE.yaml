@@ -1,4 +1,4 @@
-# This is a language translation/localization file for Reactor. For information
+﻿# This is a language translation/localization file for Reactor. For information
 # please go to https://reactor.toggledbits.com/docs/Localization/
 #
 # This file is NOT included under the Reactor EULA, and is licensed separately
@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21307  # update this to the Julian date (YYDDD) of your published translation
+version: 21340  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21305
+ref_version: 21332
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -297,6 +297,8 @@ strings:
   '#cond-op-isnull': 'är NULL'  # condition op
   '#cond-op-isval': 'är inte NULL'  # condition op
   '#cond-op-change': 'ändras'  # condition op
+  '#cond-op-empty': 'är TOM'  # condition op
+  '#cond-op-notempty': 'är inte TOM'  # condition op
   '#cond-desc-between': '{0} och {1}'  # condition operands for between/not between
   '#cond-desc-changes': 'från {0} till {1}'  # condition operands for changes
   '(any)': '(något)'  # change operand - any value
@@ -333,7 +335,7 @@ strings:
     mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
     {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#sun-desc-nob': >
-    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
+    inte mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
     {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#weekday-desc-': 'varje vecka på {0}'  # weekdays
   '#weekday-desc-1': 'på den första {0} i varje månad'
