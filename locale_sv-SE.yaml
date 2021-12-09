@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21340  # update this to the Julian date (YYDDD) of your published translation
+version: 21343  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21332
+ref_version: 21340
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -329,8 +329,8 @@ strings:
   '(case-sensitive)': '(skiftlägeskänslig)'  # case-sensitive test condition
   '{0} (missing rule)': '{0} (saknad regel)'  # rule condition, missing rule ID
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
-  '#sun-desc-after': 'efter {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
-  '#sun-desc-before': 'före {1:D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-after': 'efter {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-before': 'före {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
   '#sun-desc-bet': >
     mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
     {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
@@ -488,6 +488,7 @@ strings:
   '#reaction-button-drag': 'Dra för att flytta/ordna'  # tooltip
   '#reaction-button-remove': 'Ta bort åtgärd'  # tooltip
   #
+  '#reaction-delay-for': 'i'  # label, Delay action
   'Enter delay time in seconds, or MM:SS, or HH:MM:SS': 'Skriv in fördröjd tid i sekunder, eller MM:SS, eller HH:MM:SS'
   'from this point': 'härifrån'
   'from start of reaction': 'från början av reaktion'
@@ -551,9 +552,27 @@ strings:
     Notera: den här åtgärden tillåter susbstitut med syntax <tt>${{expr}}</tt> i alla begäranfält.
   '#deprecated-action-use': '(inaktuell; använd {0:q})'  # 0=replacement action
   '#deprecated-action': '(inaktuell utan ersättare)'
-  '; save response to {0:q} ({1})': '; spara svar till {0:q} ({1})'  # 0=varname, 1=rule
+  '; save response to {0:q} {1} ({2})': '; spara svar till {0:q} {1} ({2})'  # 0=varname, 1=rule name, 2=rule ID
   '; save response to {0:q} (local)': '; spara svar till {0:q} (lokal)'  # 0=varname
   '; save response to {0:q} (global)': '; spara svar till {0:q} (global)'  # 0=varname
+  '; capture output to {0:q} {1} ({2})': '; fånga utmatning till {0:q} {1} ({2})'  # 0=varname, 1=rule name, 2=rule ID
+  '; capture output to {0:q} (local)': '; fånga utmatning till {0:q} (lokal)'  # 0=varname
+  '; capture output to {0:q} (global)': '; fånga utmatning till {0:q} (global)'  # 0=varname
+  # Action description text assemblies (detail panels in reaction list)
+  '#action-desc-delay-inline': 'Fördröj i {0} sekund{0:"er"?>1}'
+  '#action-desc-delay-start': 'Fördröj i {0} sekund{0:"er"?>1} från början av reaktionen'
+  '#action-desc-comment': 'Kommentar: {0}'
+  '#action-desc-perform': 'Utför {0} på {1}{2:" med "?#>0}{2}'
+  '#action-desc-setvar-rule': 'Sätt Variabel {0} i {1} till {2}{3:" och evaluera igen"?t}'
+  '#action-desc-setvar-global': 'Sätt Variabel {0} till {1}{2:" och evaluera igen"?t}'
+  '#action-desc-run-global': 'Kör global reaktion {0} ({1})'  # reaction name, id
+  '#action-desc-run-rule': 'Kör regel {0} ({1}) {2:"Sätt"?t}{2:"Återställ"?f} reaktion'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-stop-global': 'Stoppa global reaktion {0} ({1})'  # reaction name, id
+  '#action-desc-stop-rule': 'Stoppa regel {0} ({1}) {2:"Sätt"?t}{2:"Återställ"?f} reaktion'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-notify': 'Notifiera med {0}: {1}'  # method, parameters
+  '#action-desc-request': 'Begär HTTP {0} {1:q}{2:"; vänta tills förfrågan är klar"?#t}'  # method, URL, true=wait
+  '#action-desc-shell': 'Skal kommando: {0:q}{1:" (ignorera avslutskod)"?t}'  # command, true=ignore exit code
+  '#action-desc-unrecognized': 'Åtgärdstypen känns inte igen {0:q}? {1}'  # action type, data
 
   # Expression Editor
   '#expr-status-no-data': '(ingen data)'  # status: no data
@@ -758,3 +777,7 @@ strings:
     Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3}
   "Reaction {0:q} ({1}) step {2} HTTP request can't set error/null response to variable {3:q}": >
     Reaktion {0:q} ({1}) steg {2} HTTP begäran kan inte sätta fel/null svar till variabel {3:q}
+
+# disused as of 21340
+
+  '; save response to {0:q} ({1})': '; spara svar till {0:q} ({1})'  # 0=varname, 1=rule
