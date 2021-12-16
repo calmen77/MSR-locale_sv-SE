@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21343  # update this to the Julian date (YYDDD) of your published translation
+version: 21350  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -645,7 +645,7 @@ strings:
     Reaktion {0:q} ({1}) steg {2} fördöjning ignorerad eftersom måltiden redan har passerat.
   'from {0:s?!n}{0:"now"?} + {1} seconds': 'från {0:s?!n}{0:"nu"?} + {1} sekund{1:"er"?>1}'  # 0=delay start point, 1=delay length
   "Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.": >
-    Reaktion {0:q} ({1}) steg {2} Entitetsåtgärden misslyckades efterom entitet {3:q} inte kunde hittas.
+    Reaktion {0:q} ({1}) steg {2} Entitetsåtgärden misslyckades eftersom entitet {3:q} inte kunde hittas.
   "Reaction {0:q} ({1}) step {2} notification method {3} attempted but is not configured.": >
     Reaktion {0:q} ({1}) steg {2} notifieringsmetod {3} försökte men är inte konfigurerad.
   "Reaction {0:q} ({1}) step {2} notification method {3} could not be loaded/initialized due to an error.": >
