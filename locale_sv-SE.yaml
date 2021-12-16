@@ -630,7 +630,7 @@ strings:
   "An error occurred running performAction({0:q}, {1:q}, ...)": >  # 0=entitet ID, 1=åtgärdsnamn
     Ett fel uppstod vid performAction({0:q}, {1:q}, ...)
   "performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.": >
-    performAction({0:q}, {1:q}, ...) misslyckades eftersom specificerad entit inte kunde hittas.
+    performAction({0:q}, {1:q}, ...) misslyckades eftersom specificerad entitet inte kunde hittas.
   "Unable to compile global expression {0:q}": "Kunde inte kompilera globalt uttryck {0:q}"  # 0=var name
   "Unable to resolve global expression {0:q}": "Kunde inte utvärdera globalt uttryck {0:q}"  # 0=var name
   "#reaction-subst-failed-eval": >
@@ -642,7 +642,7 @@ strings:
   "Reaction task {0:q} failed due to an exception. Please see the log.": >
     Reaktionsuppgiften {0:q} misslyckades på grund av ett undantag. Vänligen undersök i loggfilen.
   "Reaction {0:q} ({1}) step {2} delay ignored because the delay target time has already passed.": >
-    Reaktion {0:q} ({1}) steg {2} fördöjning ignorerad eftersom måltiden redan har passerat.
+    Reaktion {0:q} ({1}) steg {2} fördröjning ignorerad eftersom måltiden redan har passerat.
   'from {0:s?!n}{0:"now"?} + {1} seconds': 'från {0:s?!n}{0:"nu"?} + {1} sekund{1:"er"?>1}'  # 0=delay start point, 1=delay length
   "Reaction {0:q} ({1}) step {2} Entity action failed because the entity {3:q} cannot be found.": >
     Reaktion {0:q} ({1}) steg {2} Entitetsåtgärden misslyckades eftersom entitet {3:q} inte kunde hittas.
