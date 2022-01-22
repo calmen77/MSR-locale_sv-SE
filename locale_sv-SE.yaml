@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 21350  # update this to the Julian date (YYDDD) of your published translation
+version: 22022  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 21340
+ref_version: 22018
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -146,6 +146,16 @@ strings:
   "; this alert has repeated {0:d} times.": '; den här varningen har upprepats {0:d} gång{0:"er"?!=1}.'  # count
   'Dismiss Alert': 'Avfärda varning'  # title text for dismiss button (hover)
   'Clear All': 'Rensa alla'  # card menu item
+  'Rule History': 'Regelhistorik'  # card title/widget name
+  'Reaction History': 'Reaktionshistorik'  # card title/widget name
+  'Controller Status': 'Kontrollerstatus'  # card title/widget name
+  'Click to add a new widget': 'Klicka för att lägga till ny widget'  # hover tip
+  'About Status Panel Widgets': 'Om widgets'  # card title/widget name
+  'New Widget': 'Ny widget'
+  '#status-widget-info-text': >
+    Det här är statuspanelen. Varje element av statuspanelen är en "widget" som du kan anpassa.
+    Dra en widget för att flytta den. Ändra storlek på en widget genom att ta tag i pilarna nere i högra hörnet och dra. Ta bort en widget genom att flytta bort den från statuspanelen (till vänster ut över navigeringsmenyn). Lägg till en ny widget genom att klicka på "Lägg till widget" widget (skrolla ned). Du kan ändra denna widget till något annat genom att välja en ny typ nedan:
+  'Choose Widget:': 'Välj widget:'  # selector label
 
   # Rule Sets page
   'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
@@ -377,6 +387,7 @@ strings:
   '#condoutput-form-pulselimit': 'upp till {0} gånger (0/blankt=ingen&nbsp;begränsning)'
   '#condoutput-latch': 'Lås - utmatning hålls sann tills syskon återställer'
   'Restrictions': 'Restriktioner'  # condition options restrictions group title
+  '#condrestrict-seq-conds': 'Valbara villkor'  # menu section titla (sequences)
   '#condrestrict-seqmenu': 'Villkor måste uppfyllas efter {0}'  # form field (condition menu)
   '(any time/no sequence)': '(närsomhelst/ingen sekvens)'  # sequence option menu default
   '#condrestrict-seq-time': 'inom {0} sekunder (0 = ingen tidsbegränsning)'  # form field
@@ -436,6 +447,8 @@ strings:
   'Show condition options': 'Visa villkorsalternativ'  # tooltip
   'Hide condition options': 'Dölj villkorsalternativ'  # tooltip
   'Move condition (drag)': 'Flytta villkor (dra)'  # tooltip
+  '#cond-button-clone': 'Klona villkor'  # tooltip
+  '#grp-button-clone': 'Klona grupp'  # tooltip
   'Move group (drag)': 'Flytta grupp (dra)'  # tooltip
   'Delete condition': 'Ta bort villkor'  # tooltip
   'Delete group': 'Ta bort grupp'  # tooltip
