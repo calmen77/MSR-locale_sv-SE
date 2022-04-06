@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22024  # update this to the Julian date (YYDDD) of your published translation
+version: 22096  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22022
+ref_version: 22054
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -478,6 +478,7 @@ strings:
   '#cond-opchange-title': 'Byt operator'
   '#cond-opchange-msg': >
     Att byta operator på detta villkor kommer att ta bort de icke-standard villkorsalternativ som redan är satta. Fortsätta?
+  '{0} (DEPRECATED)': '{0} (INAKTUELL)'  # Entity attribute name menu, attribute now deprecated
 
   # Reaction Editor
   '#reaction-comment': 'Kommentar'
