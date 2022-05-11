@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22124  # update this to the Julian date (YYDDD) of your published translation
+version: 22131  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22056
+ref_version: 22124
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -235,6 +235,7 @@ strings:
   '#entities-col-id': 'Kanoniskt ID'  # column heading
   '#entities-col-value': 'Primärt värde'  # column heading
   '#entities-col-modified': 'Senast ändrad'  # column heading
+  '#entity-rename-button-label': 'Ändra namn'  # button label (entity detail)
   '#entity-rename-title': 'Ändra namn på entitet'  # dialog title
   '#entity-rename-input-label': 'Nytt namn'  # field label
   '#entity-rename-advice': >
@@ -242,12 +243,14 @@ strings:
     Om källobjektet har stöd för namnändring bör du ändra namnet där istället.
   '#entity-rename-button-cancel': 'Avbryt'  # button label
   '#entity-rename-button-rename': 'Ändra namn'  # button label
+  '#entity-delete-button-label': 'Ta bort'  # button label (entity detail)
   '#entity-delete-title': 'Ta bort entitet'  # dialog title
   '#entity-delete-button-cancel': 'Avbryt'  # button label
   '#entity-delete-button-delete': 'Ta bort'  # button label
   '#entity-delete-body': >
     Att ta bort en entitet tar bara bort den från Reactor, inte från källan den är ansluten till.
     Om källobjektet fortfarande existerar så kommer entiteten återskapas nästa gång källan inventeras.
+  '#entity-missing-alert': 'Entiteten är markerad som saknad på källan'
 
   # Scope page
   '(choose attribute)': '(välj attribut)'
@@ -738,6 +741,8 @@ strings:
     Regel {0:q} är nedstrypt eftersom uppdateringsfrekvensen överstiger {1} uppdateringar per minut. Kontrollera om det finns logiska fel som orsakar en evalueringsloop eller om en enhet "fladdrar".
   '#rule-change-rate': >
     Regel {0:q} är nedstrypt eftersom den har bytt status mer än {1} gånger den senaste minuten. Kontrollera om den innehåller en "fladdrande" enhet eller om du har en loop in din logik.
+  'An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found': >
+    Ett entitetsattributs tillstånd i {0:q} ({1}) misslyckades eftersom refererad entitet {2:q} inte kunde hittas
 
   # General use strings
   'Reactor': 'Reactor'
@@ -793,6 +798,10 @@ strings:
   'Required value.': 'Nödvändigt värde.'  # error text
   'Click to select entity': 'Klicka för att välja entitet'  # entity picker
   'Link to documentation for topic': 'Länk till dokumentation för ämnet (engelska)'
+  'Controller {0} device {1:q} ({2}) no longer exists.': 'Kontroller {0} enhet {1:q} ({2}) finns inte längre.'
+  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Hittade ny enhet {0} (#{1}) på kontroller {2:q}'
+
+
 
 # disused as of 21305
 
