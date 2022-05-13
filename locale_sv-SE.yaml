@@ -156,6 +156,7 @@ strings:
     Det här är statuspanelen. Varje element av statuspanelen är en "widget" som du kan anpassa.
     Dra en widget för att flytta den. Ändra storlek på en widget genom att ta tag i pilarna nere i högra hörnet på en widget och dra. Ta bort en widget genom att flytta bort den från statuspanelen (till vänster ut över navigeringsmenyn). Lägg till en ny widget genom att klicka på "⊕" widgeten (skrolla ned). Du kan ändra denna widget till något annat genom att välja en ny typ nedan:
   'Choose Widget:': 'Välj widget:'  # selector label
+  'Controller ID: {0}': 'Kontroller ID: {0}'  # tooltip for controller status entry
 
   # Rule Sets page
   'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
