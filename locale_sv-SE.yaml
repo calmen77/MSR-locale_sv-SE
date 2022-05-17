@@ -236,14 +236,14 @@ strings:
   '#entities-col-id': 'Kanoniskt ID'  # column heading
   '#entities-col-value': 'Primärt värde'  # column heading
   '#entities-col-modified': 'Senast ändrad'  # column heading
-  '#entity-rename-button-label': 'Ändra namn'  # button label (entity detail)
-  '#entity-rename-title': 'Ändra namn på entitet'  # dialog title
+  '#entity-rename-button-label': 'Byt namn'  # button label (entity detail)
+  '#entity-rename-title': 'Byt namn på entitet'  # dialog title
   '#entity-rename-input-label': 'Nytt namn'  # field label
   '#entity-rename-advice': >
-    Att ändra namn på en entitet ändrar bara namnet i Reactor, det ändrar inte namnet den har på källan den är ansluten till.
+    Att byta namn på en entitet ändrar bara namnet i Reactor, det byter inte namnet den har på källan den är ansluten till.
     Om källobjektet har stöd för namnändring bör du ändra namnet där istället.
   '#entity-rename-button-cancel': 'Avbryt'  # button label
-  '#entity-rename-button-rename': 'Ändra namn'  # button label
+  '#entity-rename-button-rename': 'Byt namn'  # button label
   '#entity-delete-button-label': 'Ta bort'  # button label (entity detail)
   '#entity-delete-title': 'Ta bort entitet'  # dialog title
   '#entity-delete-button-cancel': 'Avbryt'  # button label
