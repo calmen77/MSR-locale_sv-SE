@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22133  # update this to the Julian date (YYDDD) of your published translation
+version: 22140  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22131
+ref_version: 22140
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -800,7 +800,7 @@ strings:
   'Click to select entity': 'Klicka för att välja entitet'  # entity picker
   'Link to documentation for topic': 'Länk till dokumentation för ämnet (engelska)'
   'Controller {0} device {1:q} ({2}) no longer exists.': 'Kontroller {0} enhet {1:q} ({2}) finns inte längre.'
-  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Hittade ny enhet {0} (#{1}) på kontroller {2:q}'
+  'Discovered new device {0:q} ({1}) on controller {2:q}': 'Hittade ny enhet {0:q} ({1}) på kontroller {2:q}'
 
 
 
