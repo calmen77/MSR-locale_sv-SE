@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22140  # update this to the Julian date (YYDDD) of your published translation
+version: 22146  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -126,7 +126,7 @@ strings:
   'Host time': 'Värddatorns tid'  # tooltip, header
   '#sysconf-error-time': >
     Tiden mellan det här systemet och värden för Reactor skiljer sig markant.
-    Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen     kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren     rapporterar {1}; skillnad {2:.3f} sekunder.
+    Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren rapporterar {1}; skillnad {2:.3f} sekunder.
 
   # Status page
   '#reaction-status-ended': 'avslutad'
@@ -579,7 +579,7 @@ strings:
   "Command contains illegal characters (line breaks)": "Kommandot innehåller ogiltiga tecken (radbrytningar)"
   '"Try" button cannot be used when substitutions are used in parameters': >
    "Testa" knappen kan inte användas när ett substitut är använt i parametrarna
-  'Try this action': 'Test den här åtgärden'
+  'Try this action': 'Testa den här åtgärden'
   'Click for predefined values or enter your own': 'Klicka för fördefinierade värden eller ange ditt egna'
   '(unspecified)': '(ospecificerad)'
   'Group Constraints': 'Grupprestriktioner'
