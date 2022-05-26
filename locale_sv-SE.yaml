@@ -661,7 +661,7 @@ strings:
   'The "test time" function is configured; Reactor is not operating in "real" time.': >
     "testa-tid" funktionen är konfigurerad; Reactor körs inte i "nutid".
   'The engine has been disabled and is not running (rules are not being processed).': >
-    Logikmotorn har avaktiverats och kör inte (regler bearbetas inte).
+    Logikmotorn har inaktiverats och kör inte (regler bearbetas inte).
   "An error occurred running performAction({0:q}, {1:q}, ...)": >  # 0=entitet ID, 1=åtgärdsnamn
     Ett fel uppstod vid performAction({0:q}, {1:q}, ...)
   "performAction({0:q}, {1:q}, ...) failed because the specified entity could not be found.": >
@@ -794,8 +794,8 @@ strings:
   'Operation in Progress': 'Pågående ändringar'
   'Please complete the current operation before switching views': 'Vänligen slutför pågående ändringar innan du byter vy.'
   'Loading...': 'Laddar...'
-  'Enabled; click to disable': 'Aktiverad; klicka för att avaktivera'
-  'Disabled; click to enable': 'Avaktiverad; klicka för att aktivera'
+  'Enabled; click to disable': 'Aktiverad; klicka för att inaktivera'
+  'Disabled; click to enable': 'Inaktiverad; klicka för att aktivera'
   'Required value.': 'Nödvändigt värde.'  # error text
   'Click to select entity': 'Klicka för att välja entitet'  # entity picker
   'Link to documentation for topic': 'Länk till dokumentation för ämnet (engelska)'
