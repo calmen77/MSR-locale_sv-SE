@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22146  # update this to the Julian date (YYDDD) of your published translation
+version: 22255  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22140
+ref_version: 22244
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -355,6 +355,8 @@ strings:
   '(global expression) {0}': '(globalt uttryck) {0}'  # global, variable name
   '(case-sensitive)': '(skiftlägeskänslig)'  # case-sensitive test condition
   '{0} (missing rule)': '{0} (saknad regel)'  # rule condition, missing rule ID
+  'minutes after': 'minuter efter'  # sun condition menu
+  'minutes before': 'minuter före'  # sun condition menu
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
   '#sun-desc-after': 'efter {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
   '#sun-desc-before': 'före {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
@@ -528,6 +530,7 @@ strings:
   'from this point': 'härifrån'
   'from start of reaction': 'från början av reaktion'
   "Enter value to be assigned to this variable.": "Skriv in ett värde som ska tilldelas denna variabel."  # tooltip
+  "Wait for completion": "Vänta till den är slutförd"  # checkbox label (Run Reaction action)
   "Force re-evaluation of expressions and conditions": "Framtvinga ny utvärdering av uttryck och villkor"
   "Message:": "Meddelande:"  # field label, notify action
   "Request URL:": "URL:"  # field label, HTTP Request action
@@ -602,6 +605,8 @@ strings:
   '#action-desc-setvar-global': 'Sätt Variabel {0} till {1}{2:" och evaluera igen"?t}'
   '#action-desc-run-global': 'Kör global reaktion {0} ({1})'  # reaction name, id
   '#action-desc-run-rule': 'Kör regel {0} ({1}) {2:"Sätt"?t}{2:"Återställ"?f} reaktion'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-run-wait': ' (vänta till den är klar)'
+  '#action-desc-run-continue': ' (vänta inte till den är klar)'
   '#action-desc-stop-global': 'Stoppa global reaktion {0} ({1})'  # reaction name, id
   '#action-desc-stop-rule': 'Stoppa regel {0} ({1}) {2:"Sätt"?t}{2:"Återställ"?f} reaktion'  # rule name, ID, true=Set/false=Reset
   '#action-desc-notify': 'Notifiera med {0}: {1}'  # method, parameters
