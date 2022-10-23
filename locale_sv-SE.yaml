@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22255  # update this to the Julian date (YYDDD) of your published translation
+version: 22296  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22244
+ref_version: 22292
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -389,7 +389,7 @@ strings:
   '#condopt-seq': >  # time restriction (seconds), condition description, must still be true flag (boolean)
     {0:"inom "?>0}{0:d?>0}{0:" sekund"?>0}{0:"er"?>1} efter {1:q}{2:" (vilket fortfarande är SANT)"?sant}
   '#condopt-repeat': 'repeteras {0} gång{0:"er"?>1} inom {1} sekund{1:"er"?>1}'
-  '#condopt-sustain': 'i {0:"mindre än "?:<}{0:"åtminstone "?!:<}{1} sekund{1:"er"?>1}'
+  '#condopt-sustain': 'i {0:"mindre än "?:lt}{0:"åtminstone "?!:lt}{1} sekund{1:"er"?>1}'
   '#condopt-hold': 'fördröj återställning i {0} sekund{0:"er"?>1}'
   '#condopt-pulse': 'pulsera i {0} sekund{0:"er"?>1}{1:", repetera efter "?>0}{1:d?>0}{1:" sekund"?>0}{1:"er"?>1}{2:" upp till "?>0}{2:d?>0}{2:" gång"?>0}{2:"er"?>1}'
   '#condopt-latch': 'låst'
