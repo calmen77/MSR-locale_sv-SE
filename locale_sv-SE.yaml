@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 22306  # update this to the Julian date (YYDDD) of your published translation
+version: 23062  # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 22306
+ref_version: 23010
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -552,6 +552,7 @@ strings:
   'Capture output (stdout) to:': 'Fånga utmatning (stdout) till:'  # field label, Shell Command action
   '(ignore/discard output)': '(ignorera/kassera utmatning)'  # menu option default
   'Ignore shell/command exit code': 'Ignorera skal/kommandots avslutskod'  # checkbox label, Shell Command action
+  '#opt-current-reaction': '(den här reaktionen)'  # Menu option - current executing reaction
   # Rename Reaction modal dialog
   '#reaction-rename-title': 'Byt namn på Reaktion'
   '#reaction-rename-button-rename': 'Byt namn'
@@ -611,6 +612,7 @@ strings:
   '#action-desc-run-continue': ' (vänta inte till den är klar)'
   '#action-desc-stop-global': 'Stoppa global reaktion {0} ({1})'  # reaction name, id
   '#action-desc-stop-rule': 'Stoppa regel {0} ({1}) {2:"Sätt"?t}{2:"Återställ"?f} reaktion'  # rule name, ID, true=Set/false=Reset
+  '#action-desc-stop-current': 'Stoppa den här reaktionen'  # Stop current reaction
   '#action-desc-notify': 'Notifiera med {0}: {1}'  # method, parameters
   '#action-desc-request': 'Begär HTTP {0} {1:q}{2:"; vänta tills förfrågan är klar"?#t}'  # method, URL, true=wait
   '#action-desc-shell': 'Skal kommando: {0:q}{1:" (ignorera avslutskod)"?t}'  # command, true=ignore exit code
@@ -734,7 +736,7 @@ strings:
   'Rule {0:q} failed because an Interval condition references a dependent condition that no longer exists.': >
     Regel {0:q} misslyckades eftersom ett intervallvillkor refererar till ett beroende villkor som inte längre finns.
   'Rule {0:q} failed because it contains a condition of type {1}, which is not a recognized condition type': >
-    Regel {0:q} misslyckades eftersom den innehåller ett villkor av typen {1}, vilket är en okänd villkorstyp
+    Regel {0:q} misslyckades eftersom den innehåller ett villkor av typen {1}, vilket är en okänd villkorstyp.
   "Invalid/unsupported condition type {0:q} in {1:q}": "Ogiltigt/ej stödd villkorstyp {0:q} i {1:q}"  # 0=cond type, 1=cond ID
   'Rule {0:q} could not start because of an error; please refer to the log file.': >
     Regel {0:q} kunde inte starta på grund av ett fel; vänligen se loggfilen.
@@ -750,7 +752,23 @@ strings:
   '#rule-change-rate': >
     Regel {0:q} är nedstrypt eftersom den har bytt status mer än {1} gånger den senaste minuten. Kontrollera om den innehåller en "fladdrande" enhet eller om du har en loop in din logik.
   'An Entity Attribute condition in {0:q} ({1}) failed because the referenced entity {2:q} could not be found': >
-    Ett entitetsattributs tillstånd i {0:q} ({1}) misslyckades eftersom refererad entitet {2:q} inte kunde hittas
+    Ett entitetsattributs tillstånd i {0:q} ({1}) misslyckades eftersom refererad entitet {2:q} inte kunde hittas.
+  "An Entity Attribute condition in rule {0:q} ({1}) failed because the referenced entity {2} ({3}) does not have attribute {4}": >
+    Ett entitetsattributs tillstånd i regel {0:q} ({1}) misslyckades eftersom refererad entitet {2} ({3}) inte har attribut {4}
+  'An "Expression Value" condition in rule {0:q} ({1}) references an expression {2:q} of rule {3:q} ({4}) that no longer exists.': >
+    Tillståndet av ett uttrycksvärde i regel {0:q} ({1}) refererar till ett uttryck {2:q} i regel {3:q} ({4}) som inte längre finns.
+  'An "Expression Value" condition in rule {0:q} ({1}) references a local expression {2:q} that no longer exists.': >
+    Tillståndet av ett uttrycksvärde i regel {0:q} ({1}) refererar till ett lokalt uttryck {2:q} som inte längre finns.
+  'An Expression Value condition in rule {0:q} ({1}) references rule {2:q}, which no longer exists.': >
+    Tillståndet av ett uttrycksvärde i regel {0:q} ({1}) refererar till regel {2:q}, som inte längre finns.
+  'An "Expression Value" condition in rule {0:q} ({1}) references global expression {2:q}, which no longer exists.': >
+    Tillståndet av ett uttrycksvärde i regel {0:q} ({1}) refererar till ett globalt uttryck {2:q}, som inte längre finns.
+  'Rule {0:q} ({1}) failed because an Interval condition references a dependent condition that no longer exists.': >
+    Regel {0:q} ({1}) misslyckades eftersom ett intervallvillkor refererar till ett beroende villkor som inte längre finns.
+  'Rule {0:q} ({1}) failed because it contains a condition of type {2:q}, which is not a recognized condition type': >
+    Regel {0:q} ({1}) misslyckades eftersom den innehåller ett villkor av typen {2:q}, vilket är en okänd villkorstyp.
+  'Rule {0:q} ({1}) could not start because of an error; please refer to the log file.': >
+    Regel {0:q} ({1}) kunde inte starta på grund av ett fel; vänligen se loggfilen.
 
   # General use strings
   'Reactor': 'Reactor'
