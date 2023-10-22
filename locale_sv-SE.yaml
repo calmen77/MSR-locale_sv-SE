@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 23128  # update this to the Julian date (YYDDD) of your published translation
+version: 23295   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -363,14 +363,14 @@ strings:
   'minutes after': 'minuter efter'  # sun condition menu
   'minutes before': 'minuter före'  # sun condition menu
   # Formatting of sunrise/sunset rules; lots of conditional formatting here to make readable phrases
-  '#sun-desc-after': 'efter {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
-  '#sun-desc-before': 'före {1:#D?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-after': 'efter {1:#D?!=0}{1:" minut"?!=0}{1:"er"?<-1}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
+  '#sun-desc-before': 'före {1:#D?!=0}{1:" minut"?!=0}{1:"er"?<-1}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T}'
   '#sun-desc-bet': >
-    mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
-    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+    mellan {1:#d?!=0}{1:" minut"?!=0}{1:"er"?<-1}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} och
+    {3:#d?!=0}{3:" minut"?!=0}{3:"er"?<-1}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#sun-desc-nob': >
-    inte mellan {1:#d?!=0}{1:" minut"?>0}{1:"er"?>}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
-    {3:#d?!=0}{3:" minut"?>0}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
+    inte mellan {1:#d?!=0}{1:" minut"?!=0}{1:"er"?<-1}{1:"er"?>1}{1:" före"?<0}{1:" efter"?>0"} {0:T} and
+    {3:#d?!=0}{3:" minut"?!=0}{3:"er"?<-1}{3:"er"?>1}{3:" före"?<0}{3:" efter"?>0"} {2:T}
   '#weekday-desc-': 'varje vecka på {0}'  # weekdays
   '#weekday-desc-1': 'på den första {0} i varje månad'
   '#weekday-desc-2': 'på den andra {0} i varje månad'
