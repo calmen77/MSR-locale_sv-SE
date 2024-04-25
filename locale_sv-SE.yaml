@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 23295   # update this to the Julian date (YYDDD) of your published translation
+version: 24116   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 23093
+ref_version: 24095
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -195,6 +195,11 @@ strings:
   '#rule-control-copy': 'Kopiera/Flytta regel'  # tooltip
   '#rule-control-sort': 'Sortera (Håll ned och dra)'  # tooltip
   '#rule-control-delete': 'Ta bort regel'  # tooltip
+  '#rule-control-tools': 'Verktyg'  # tooltip
+  '#rule-override-auto': 'Auto'  # tooltip - Rule state override
+  '#rule-override-set': 'Åsidosätt: Reaktion'  # tooltip - Rule state override
+  '#rule-override-reset': 'Åsidosätt: Återställningsreaktion'  # tooltip - Rule state override
+  '#rule-override-attn-text': 'ÅSIDOSATT STATUS'  # displayed on override before state
   'This rule set is empty. Click "Add Rule" to add a rule to it.': 'Den här regelgruppen är tom. Klicka på "Lägg till regel" för att lägga till en regel.'
 
 # Rule status detail card
@@ -249,6 +254,7 @@ strings:
   '#entity-delete-title': 'Ta bort entitet'  # dialog title
   '#entity-delete-button-cancel': 'Avbryt'  # button label
   '#entity-delete-button-delete': 'Ta bort'  # button label
+  '#entity-copyattr-button-copy': 'Kopiera attribut'  # button label
   '#entity-delete-body': >
     Att ta bort en entitet tar bara bort den från Reactor, inte från källan den är ansluten till.
     Om källobjektet fortfarande existerar så kommer entiteten återskapas nästa gång källan inventeras.
@@ -773,6 +779,11 @@ strings:
     Regel {0:q} ({1}) misslyckades eftersom den innehåller ett villkor av typen {2:q}, vilket är en okänd villkorstyp.
   'Rule {0:q} ({1}) could not start because of an error; please refer to the log file.': >
     Regel {0:q} ({1}) kunde inte starta på grund av ett fel; vänligen se loggfilen.
+  'Rule data integrity check has found and corrected errors. Reactor needs to be restarted. See the log for details.': >
+    Integritetskontrollen för regler har hittat och korrigerat fel. Reactor behöver startas om. Se loggfilen för detaljer.
+  'The rule with ID {0} in {1:q} could not be loaded due to a fatal error. See the log.': >
+    Regeln med ID {0} i {1:q} kunde inte laddas p.g.a. ett allvarligt fel. Se loggfilen.
+  'Notify Action in {0}: {1}': 'Notifieringsåtgärd i {0}: {1}'  # Alert Notifier
 
   # General use strings
   'Reactor': 'Reactor'
