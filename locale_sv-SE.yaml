@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24116   # update this to the Julian date (YYDDD) of your published translation
+version: 24153   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 24095
+ref_version: 24141
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -120,6 +120,7 @@ strings:
   '#nav_bugs': Buggrapportering
   '#nav_donate': Donera
   '#nav_about': Om
+  '#nav_logout': Logga ut
   'Connected': 'Ansluten'
   'DISCONNECTED!': 'FRÅNKOPPLAD!'
   'Local (browser) time': 'Lokal tid (webbläsare)'  # tooltip, header
@@ -285,6 +286,17 @@ strings:
   '(any capability)': '(någon förmåga)'
   '#ep-col-entity': 'Entitet'  # column label
   '#ep-col-id': 'ID'  # column label
+
+  # Login Page
+  '#login-username-prompt': Användarnamn
+  '#login-password-prompt': Lösenord
+  '#login-user-pass-reqd': "Användarnamn och lösenord är nödvändigt."
+  '#login-please-wait': "Vänligen vänta..."
+  '#login-not-permitted': "Du har inte behörighet till den här resursen."
+  '#login-auth-fail': "Ditt användarnamn och/eller lösenord är felaktigt."
+  '#login-general-error': "Något gick fel. Försök igen."
+  '#login-goodbye': "Du har loggat ut."
+  '#login-remember-me': "Kom ihåg mig"
 
   # Rule Editor
   '#ruleedit-triggers-title': 'Utlösare'
