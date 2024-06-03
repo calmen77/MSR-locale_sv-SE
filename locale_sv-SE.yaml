@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24153   # update this to the Julian date (YYDDD) of your published translation
+version: 24155   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 24141
+ref_version: 24153
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -297,6 +297,7 @@ strings:
   '#login-general-error': "Något gick fel. Försök igen."
   '#login-goodbye': "Du har loggat ut."
   '#login-remember-me': "Kom ihåg mig"
+  '#login-button-text': "Logga in"
 
   # Rule Editor
   '#ruleedit-triggers-title': 'Utlösare'
