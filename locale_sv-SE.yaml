@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24155   # update this to the Julian date (YYDDD) of your published translation
+version: 24296   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 24153
+ref_version: 24293
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -128,6 +128,8 @@ strings:
   '#sysconf-error-time': >
     Tiden mellan det här systemet och värden för Reactor skiljer sig markant.
     Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren rapporterar {1}; skillnad {2:.3f} sekunder.
+  "#ui-theme-switch-to-dark": "Byt till mörkt tema"
+  "#ui-theme-switch-to-light": "Byt till ljust tema"
 
   # Status page
   '#reaction-status-ended': 'avslutad'
@@ -159,6 +161,7 @@ strings:
   'Choose Widget:': 'Välj widget:'  # selector label
   'Controller ID: {0}': 'Kontroller ID: {0}'  # tooltip for controller status entry
   'Stop this reaction/task': 'Stoppa den här reaktionen/uppgiften'  # tooltip for Running Reactions stop button
+  '#statuswidgets-hrsago': '{0:d}{0:" timme"?=1}{0:" timmar"?!=1} sedan'  # 1 hr ago ...or... 2 hrs ago
 
   # Rule Sets page
   'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
@@ -206,6 +209,8 @@ strings:
 # Rule status detail card
   '#group-status-no-data': '(ingen data)'
   'Rule ID: {0}': 'Regel ID: {0}'  # 0=rule ID
+  '#pop-condval-current': "Nuvarande värde: {0}<br>at {1}"  # HTML, condition value popover
+  '#pop-condval-previous': "Föregående värde: {0}<br>at {1}"  # HTML, condition value popover
 
   # Reactions page
   '#reactions-page-title': 'Globala Reaktioner'
@@ -262,6 +267,11 @@ strings:
   '#entity-missing-alert': 'Entiteten är markerad som saknad på källan'
   '#action-form-warning': >
     Notera: variabel/uttryck substitut utförs inte på värden angivna i denna dialog.
+  '#entity-setattr-title': 'Sätt skrivbart attribut'
+  '#entity-setattr-selectattr-label': 'Attribut:'
+  '#entity-setattr-newattrval-label': 'Nytt värde:'
+  '#entity-setattr-button-set': 'Sätt attribut'
+  '#entity-setattr-button-cancel': 'Avbryt'
 
   # Scope page
   '(choose attribute)': '(välj attribut)'
@@ -526,6 +536,7 @@ strings:
   # Reaction Editor
   '#reaction-comment': 'Kommentar'
   '#reaction-entity': 'Entitetsåtgärd'
+  '#reaction-script': 'Skriptåtgärd'
   '#reaction-delay': 'Fördröj'
   '#reaction-run': 'Kör Reaktion'
   '#reaction-stop': 'Stoppa Reaktion'
@@ -559,7 +570,7 @@ strings:
   "Message:": "Meddelande:"  # field label, notify action
   "Request URL:": "URL:"  # field label, HTTP Request action
   "Ignore self-signed/invalid SSL certificates": >  # checkbox label, HTTP Request action
-    Ignorera självsignerade/ogiltiga SSL certifikat
+    Ignorera självsignerade/ogiltiga servercertifikat
   'Request Headers:': 'HTTP-huvuden:'  # field label, HTTP Request action
   'Request Body:': 'HTTP brödtext:'  # field label, HTTP Request action
   'HTTP Auth Type:': 'HTTP Autentiseringstyp:'  # field label, HTTP Request Action
@@ -601,8 +612,9 @@ strings:
   '{0} - Set': '{0} - Satt'  # Rule's set reaction: rule name or ID
   '{0} - Reset': '{0} - Återställd'  # Rule's reset reaction: rule name or ID
   'Must be integer > 0, or MM:SS or HH:MM:SS': 'Måste vara ett heltal > 0, eller MM:SS eller HH:MM:SS'
-  'Entity required': 'Entitet nödvändig'
-  'Selection required.': 'Urval nödvändig.'
+  'Entity required': 'Entitet är nödvändig.'
+  'Selection required.': 'Urval är nödvändigt.'
+  'Script/expression required.': 'Skript/uttryck är nödvändigt.'
   'Must be http:// or https:// or substitution': 'Måste vara http:// eller https:// eller ett substitut'
   'Invalid format': 'Ogiltigt format'
   "Command contains illegal characters (line breaks)": "Kommandot innehåller ogiltiga tecken (radbrytningar)"
@@ -857,6 +869,12 @@ strings:
   'Content hidden': 'Innehåll dolt'  # tooltip for non-empty collapsed editors
   '#reactor-update-available': 'Det finns en ny version av Reactor tillgänglig ({0}-{1}). {2}'  # branch, version, message
   '#reactor-update-message': 'Vänligen uppgradera för att ta del av de senaste buggrättningarna och funktionerna.'
+  '#validation-not-integer': 'Angivet värde är inte ett heltal.'
+  '#validation-int-minimum': 'Angivet värde måste vara ett heltal >= {0:d}'
+  '#validation-int-maximum': 'Angivet värde måste vara ett heltal <= {0:d}'
+  '#validation-not-real': 'Angivet värde är inte ett reellt tal.'
+  '#validation-real-minimum': 'Angivet värde måste vara ett reellt tal >= {0:f}'
+  '#validation-real-maximum': 'Angivet värde måste vara ett reellt tal <= {0:f}'
 
 
 # disused as of 21305
