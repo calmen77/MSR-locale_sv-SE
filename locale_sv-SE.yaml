@@ -128,8 +128,8 @@ strings:
   '#sysconf-error-time': >
     Tiden mellan det här systemet och värden för Reactor skiljer sig markant.
     Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren rapporterar {1}; skillnad {2:.3f} sekunder.
-  "#ui-theme-switch-to-dark": "Byt till mörkt tema"
-  "#ui-theme-switch-to-light": "Byt till ljust tema"
+  "#ui-theme-switch-to-dark": "Växla till mörkt tema"
+  "#ui-theme-switch-to-light": "Växla till ljust tema"
 
   # Status page
   '#reaction-status-ended': 'avslutad'
