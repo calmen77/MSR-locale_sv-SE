@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 24296   # update this to the Julian date (YYDDD) of your published translation
+version: 25178   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 24293
+ref_version: 25141
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -130,6 +130,8 @@ strings:
     Det kan bero på en felkonfiguration på något eller båda av systemen. Vänligen kontrollera konfigurationen på båda systemen. Värden rapporterar {0}; webbläsaren rapporterar {1}; skillnad {2:.3f} sekunder.
   "#ui-theme-switch-to-dark": "Växla till mörkt tema"
   "#ui-theme-switch-to-light": "Växla till ljust tema"
+  "#ui-tab-not-loaded": "Fliken har inte lästs in"
+  "#ui-tab-not-loaded-text": "Den begärda fliken kunde inte laddas. Vänligen ladda om sidan och försök igen."
 
   # Status page
   '#reaction-status-ended': 'avslutad'
@@ -157,7 +159,7 @@ strings:
   'New Widget': 'Ny widget'
   '#status-widget-info-text': >
     Det här är statuspanelen. Varje element av statuspanelen är en "widget" som du kan anpassa.
-    Dra en widget för att flytta den. Ändra storlek på en widget genom att ta tag i pilarna nere i högra hörnet på en widget och dra. Ta bort en widget genom att flytta bort den från statuspanelen (till vänster ut över navigeringsmenyn). Lägg till en ny widget genom att klicka på "⊕" widgeten (skrolla ned). Du kan ändra denna widget till något annat genom att välja en ny typ nedan:
+    Dra en widget för att flytta den. Ändra storlek på en widget genom att ta tag i pilarna nere i högra hörnet på en widget och dra. Ta bort en widget genom att flytta bort den från statuspanelen (upp över statuspanelen). Lägg till en ny widget genom att klicka på "⊕" widgeten (skrolla ned). Du kan ändra denna widget till något annat genom att välja en ny typ nedan:
   'Choose Widget:': 'Välj widget:'  # selector label
   'Controller ID: {0}': 'Kontroller ID: {0}'  # tooltip for controller status entry
   'Stop this reaction/task': 'Stoppa den här reaktionen/uppgiften'  # tooltip for Running Reactions stop button
@@ -204,7 +206,7 @@ strings:
   '#rule-override-set': 'Överskrid: Reaktion'  # tooltip - Rule state override
   '#rule-override-reset': 'Överskrid: Återställningsreaktion'  # tooltip - Rule state override
   '#rule-override-attn-text': 'ÖVERSKRIDEN STATUS'  # displayed on override before state
-  'This rule set is empty. Click "Add Rule" to add a rule to it.': 'Den här regelgruppen är tom. Klicka på "Lägg till regel" för att lägga till en regel.'
+  'This rule set is empty. Click "Add Rule" to add a rule to it.': 'Den här regelgruppen är tom. Klicka på "Skapa regel" för att lägga till en regel.'
 
 # Rule status detail card
   '#group-status-no-data': '(ingen data)'
