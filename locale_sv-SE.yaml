@@ -25,7 +25,7 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 ---
-version: 25178   # update this to the Julian date (YYDDD) of your published translation
+version: 25316   # update this to the Julian date (YYDDD) of your published translation
 locale: sv-SE
 description: Svenska
 author: "Crille, https://smarthome.community/user/crille"
@@ -37,7 +37,7 @@ maintainer: "Crille, https://smarthome.community/user/crille"
 #              US English reference file. Also, use the txtool.js application in the 
 #              Reactor install "tools" subdirectory to help you identify differences.
 
-ref_version: 25141
+ref_version: 25314
 
 # If you contribute your language file to Reactor to be included in builds, this is how
 # your attribution will be shown on the "About" page (plain text only; no HTML).
@@ -166,6 +166,7 @@ strings:
   '#statuswidgets-hrsago': '{0:d}{0:" timme"?=1}{0:" timmar"?!=1} sedan'  # 1 hr ago ...or... 2 hrs ago
 
   # Rule Sets page
+  'Search for rule': 'Sök regel'  # placeholder in search field of offcanvas
   'Add a new rule set': 'Lägg till en ny regelgrupp'  # tooltip
   '#ruleset-control-rename': 'Klicka för att byta namn på regelgrupp'  # tooltip (hover over Rule Set name)
   '#ruleset-control-alphasort': 'Sortera regler i bokstavsordning'  # tooltip
@@ -341,6 +342,7 @@ strings:
   '#cond-sun': 'Soluppgång/Solnedgång'  # condition type
   '#cond-interval': 'Intervall'  # condition type
   '#cond-startup': 'Systemstart'  # condition type
+  '#cond-script': 'Skript'  # condition type
   '#cond-op-bet': 'mellan'  # condition op
   '#cond-op-nob': 'inte mellan'  # condition op
   '#cond-op-before': 'före'  # condition op
@@ -579,6 +581,7 @@ strings:
   'Username:': 'Användarnamn:'  # field label, HTTP Request Action
   'Password:': 'Lösenord:'  # field label, HTTP Request Action
   'Capture response to:': 'Spara svar till:'  # field label, HTTP Request action
+  'Store captured response in advanced form': 'Spara svaret i avancerad form'  # field label, HTTP Request action
   '(ignore/discard response)': '(ignorera/kassera svar)'  # menu option default, HTTP Request action
   'Wait until request completes': 'Vänta tills begäran är slutförd'  # checkbox label, HTTP Request action
   'Suppress alerts on HTTP errors': 'Tysta varningar vid HTTP fel'  # checkbox label, HTTP Request action
@@ -609,6 +612,8 @@ strings:
     Jag kommer att försöka att bevara den här åtgärdstypen, men du kan inte redigera den.
   # Other strings
   'Enter comment text': 'Ange kommentarstext'  # default text for comment
+  'Enter script/expression': 'Ange skript/uttryck'
+  'YAML or JSON': 'YAML eller JSON'
   'Change Reaction Name': 'Ändra Reaktionsnamn'  # tooltip
   'Run Reaction Now': 'Kör Reaktion nu'
   '{0} - Set': '{0} - Satt'  # Rule's set reaction: rule name or ID
@@ -752,6 +757,10 @@ strings:
     Uttrycket {0:q} i variabel {1:q} i regel {2:q} ({3}) kunde inte utvärderas
   "The expression {0:q} in variable {1:q} of rule {2:q} ({3}) failed evaluation": >
     Uttrycket {0:q} i variabel {1:q} i regel {2:q} ({3}) misslyckades att utvärderas
+  "A cycle was detected in expressions at variable {0:q} of rule {1:q} ({2})": >
+    En cykel detekterades i uttrycken i variabel {0:q} i regel {1:q} ({2})
+  "#global-expr-cycle":
+    En cykel detekterades i globala uttryck i {0:q}.
   "Rule {0:q} failed evaluation due to an error. Please see the log file.": >
     Regel {0:q} misslyckades att utvärderas på grund av ett fel. Vänligen undersök i loggfilen.
   "An Entity Attribute condition in rule {0:q} failed because the referenced entity {1} could not be found": >
@@ -871,6 +880,9 @@ strings:
   'Content hidden': 'Innehåll dolt'  # tooltip for non-empty collapsed editors
   '#reactor-update-available': 'Det finns en ny version av Reactor tillgänglig ({0}-{1}). {2}'  # branch, version, message
   '#reactor-update-message': 'Vänligen uppgradera för att ta del av de senaste buggrättningarna och funktionerna.'
+  '#reactor-updated': >
+    Reactor har uppgraderats. Vänligen läs versionsinformationen på länken nedan för ytterligare information.
+  '#reactor-release-notes': 'Versionsinformation'  # link title for post-upgrade alert
   '#validation-not-integer': 'Angivet värde är inte ett heltal.'
   '#validation-int-minimum': 'Angivet värde måste vara ett heltal >= {0:d}'
   '#validation-int-maximum': 'Angivet värde måste vara ett heltal <= {0:d}'
